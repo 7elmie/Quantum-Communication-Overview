@@ -2,7 +2,7 @@
 
 ### Bridging Classical Information Theory with the Quantum Internet
 
-![Quantum Network Banner](https://upload.wikimedia.org/wikipedia/commons/6/6b/Quantum_teleportation.svg)
+![Quantum Network Banner]([https://upload.wikimedia.org/wikipedia/commons/6/6b/Quantum_teleportation.svg](https://chatgpt.com/backend-api/estuary/content?id=file_0000000053a4722fa2d2f4c490bfca69&ts=491901&p=fs&cid=1&sig=a587f2ddf50286912a2300db6ddf6456c5abba78c373949333db1fd6bf892aee&v=0))
 
 ![License](https://img.shields.io/badge/License-MIT-blue.svg)
 ![Status](https://img.shields.io/badge/Status-Research--Academic-success)
