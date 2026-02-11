@@ -55,7 +55,9 @@ Quantum State Preparation → Quantum Channel → Measurement
 
 # 🔢 2. Classical Information Theory Foundations
 
-![Binary Representation](https://upload.wikimedia.org/wikipedia/commons/3/3f/Binary_code.svg)
+<img width="1536" height="1024" alt="ChatGPT Image Feb 11, 2026, 11_53_11 PM" src="https://github.com/user-attachments/assets/c986af2f-8f87-41bb-b586-00851679c283" />
+
+---
 
 ## 2.1 Analog vs Digital
 
