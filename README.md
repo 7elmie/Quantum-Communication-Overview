@@ -2,8 +2,8 @@
 
 ### Bridging Classical Information Theory with the Quantum Internet
 
-![Quantum Network Banner]([<img width="1536" height="1024" alt="54e2af3c-6462-4802-bbdf-e6128dc03194" src="https://github.com/user-attachments/assets/e58f4218-7e46-4a79-9005-31adbcf653eb" />
-])
+!<img width="1536" height="1024" alt="ChatGPT Image Feb 11, 2026, 11_50_21 PM" src="https://github.com/user-attachments/assets/5bc71767-2507-42e6-aa9d-68def821e95c" />
+
 
 ![License](https://img.shields.io/badge/License-MIT-blue.svg)
 ![Status](https://img.shields.io/badge/Status-Research--Academic-success)
