@@ -1,10 +1,3 @@
-تمام 🔥
-ده **README احترافي قوي + طويل + مناسب Research + فيه Badges + Structure أكاديمي + جداول + صور + شكل احترافي للنشر الرسمي على GitHub**
-
-تقدر تنسخه مباشرة في `README.md`
-
----
-
 # 🌌 Quantum Communication and Quantum Networks
 
 ### Bridging Classical Information Theory with the Quantum Internet
