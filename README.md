@@ -1,4 +1,4 @@
-# 🌌 Quantum Communication and Quantum Networks
+# 🌌Quantum Communication and Quantum Networks
 
 ### Bridging Classical Information Theory with the Quantum Internet
 <img width="1536" height="1024" alt="ChatGPT Image Feb 11, 2026, 11_50_21 PM" src="https://github.com/user-attachments/assets/5bc71767-2507-42e6-aa9d-68def821e95c" />
