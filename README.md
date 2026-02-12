@@ -185,7 +185,6 @@ Security is **information-theoretic**, not computational.
 
 # 🌍 7. Quantum Network Architecture
 
-![Quantum Network](https://upload.wikimedia.org/wikipedia/commons/3/3f/Quantum_network.svg)
 
 ## Architecture Layers
 
