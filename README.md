@@ -130,7 +130,6 @@ Used in:
 
 # 🔬 4. Optical & Physical Layer of Quantum Networks
 
-![Optical Fiber](https://upload.wikimedia.org/wikipedia/commons/5/5e/Fiber_optic_cable.jpg)
 
 ### Core Physical Components
 
