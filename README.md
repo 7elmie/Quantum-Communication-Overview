@@ -94,8 +94,6 @@ Shannon's theory provides the capacity limits of classical channels.
 
 # ⚛️ 3. Quantum Information Foundations
 
-![Bloch Sphere]([https://upload.wikimedia.org/wikipedia/commons/6/6b/Bloch_sphere.svg](https://camo.githubusercontent.com/3257412c26ddbb6f5337e74ce76f115500a765d9653c5a9c7271eb233c624bee/68747470733a2f2f75706c6f61642e77696b696d656469612e6f72672f77696b6970656469612f636f6d6d6f6e732f362f36622f426c6f63685f7370686572652e737667))
-
 ## 3.1 The Qubit
 
 Unlike a classical bit:
