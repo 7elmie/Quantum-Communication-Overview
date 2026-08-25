@@ -1,7 +1,6 @@
-\chapter[Introduction]{Introduction}
-\label{sec:1_Introduction}
-
-\chaptermark{Introduction}
+# Section1: Introduction
+---
+# Introduction
 
 In this chapter, we will give you an overview of how communication has evolved over the many thousands of years of human culture and civilization, then we will tell you about sending signals between parties of a network.
 We will tell you the differences and similarities between digital and analog signals.
