@@ -1,768 +1,160 @@
-# Section1: Introduction
----
-# Introduction
+# Section 1: Introduction
+
+## Introduction
 
 In this chapter, we will give you an overview of how communication has evolved over the many thousands of years of human culture and civilization, then we will tell you about sending signals between parties of a network.
 We will tell you the differences and similarities between digital and analog signals.
-We will introduce the fundamental building block of modern communication, the \textbf{\emph{bit}}\index{bit}.
-We will move on to quantum communication and explain why you should care about it, what new capabilities that it brings to the table, and what the new challenges are that face us in designing quantum communication systems. 
+We will introduce the fundamental building block of modern communication, the **bit**.
+We will move on to quantum communication and explain why you should care about it, what new capabilities that it brings to the table, and what the new challenges are that face us in designing quantum communication systems.
 We will move on to the disruptive nature of quantum technologies and quantum communication in particular.
 We will conclude this chapter by giving you an overview of the entire module, what the prerequisites are, what you will learn, and the outcomes of the module.
 
+## History of Communication
 
-\section{History of Communication}
+Methods of communication advance in order to accommodate a growing society while new technological advances allow society to grow and expand.
 
-Methods of communication advance in order to accommodate a growing society while new technological advances allow society to grow and expand.
-
-\begin{figure}[ht]
-    \centering
-    \includegraphics[width=0.6\textwidth]{lesson1/communication.pdf}
-    \caption[Evolution of communication.]{Evolution of communication. At the start, all communicating parties had to be within earshot of each other to exchange information quickly and effectively. Today, thanks to the Internet, we can still do the same without worrying about the parties' locations.}
-    \label{fig:1-1_communication}
-\end{figure}
+<img width="1536" height="1024" alt="phone" src="https://github.com/user-attachments/assets/db0505a0-4922-4c16-8f47-e6db0e626d2b" />
 
 Humans are social creatures by nature.
-Effective communication has been crucial to our survival;
-in particular, it has been very important to share information about potential new sources of food and danger.
-We communicated by gathering around the fire and talking to each other as illustrated in Fig.~\ref{fig:1-1_communication}.
+Effective communication has been crucial to our survival; in particular, it has been very important to share information about potential new sources of food and danger.
+We communicated by gathering around the fire and talking to each other.
 Over many thousands of years, the methods of communication have evolved to become more efficient and longer ranging until we have finally reached our modern age where nearly every device that we have in our possession, our phones, our TVs, our iPads, even our fridges are all connected to a massive internetwork, the Internet.
 We can be separated by many thousands of kilometers, but when we communicate it almost feels as if we are all sharing the same fire like in the old times.
 We have gone from local communication to truly global communication.
 
-Let's see how such a massive transformation happened.
-In the next couple of paragraphs, you are going to see some famous examples from history illustrating the many different ways in which we have communicated.
+Let's see how such a massive transformation happened. In the next couple of paragraphs, you are going to see some famous examples from history illustrating the many different ways in which we have communicated.
+
 After the invention of paper (or papyrus, parchment or vellum), the most obvious way was to take your message, write it on a piece of paper and send the message directly.
-A very famous example of this method was the Battle of Marathon in 490 BC, where the legend goes that a runner was sent from where the battle took place near the city of Marathon to Athens, a distance of about 40 kilometers.
-But that is historically not true.
-The Athenians were trying to gain support of the army from the city of Sparta, located around 225 kilometers away.
-The Athenians sent a runner carrying their message to Sparta.
-And that journey, believe it or not, took a little less than a day.
 
-Another method of sending a message directly was using birds such as homing pigeons.
-These pigeons were specially trained to always return to their homes or their coops. People used to put the pigeons in cages when traveling somewhere. Whenever they needed to send a message back home, they would take a little piece of parchment paper, write the message down, attach it to the pigeon's leg, and let the pigeon go. The pigeon would automatically fly back and deliver the message.
-The range of these birds was around a very impressive 1600 kilometers.
-The average speed was around 95 kilometers per hour.
-The top speed of some very athletic pigeons was upwards of 160 kilometers per hour.
+A very famous example of this method comes from Ancient Egypt. Around 3000 BC, the Pharaoh Djedkara Isesi is credited with establishing the world's first known courier service, expanding it across Egypt and into neighboring lands.
 
-Our final example of sending messages directly is the Pony Express.
-The Pony Express was a company set up in the mid-nineteenth century in the United States to connect the East and West Coasts.
-If you were on the East Coast and you wanted to send a letter to somebody on the West Coast, you went to this company, and then they would send a horse and rider who would deliver your message.
-The messenger would ride the horse to a relay station on the way, change to a fresh horse and continue with your message onwards to the next relay station.
-Believe it or not, the entire journey of 4,000 kilometers took approximately 10 days.
-In the context of communication speeds at the time, this was very, very fast.
-Not only could you send letters, but you could also send some small parcels.
-The Pony Express was the very early Amazon!
-But despite the company's successful system, it only existed for one year; it was an early victim of the advance of technology, because it was created just as the method of communication was changing from direct transmission to electrical telegraphy.
+His couriers carried messages mostly by boat along the Nile, but also on foot along known desert routes, covering the full length of the kingdom, a distance of roughly 2,500 kilometers.
+Messages were either memorized by the courier or written on sealed papyrus scrolls to protect their contents, and for important documents a duplicate was kept behind by the sender as a backup.
+These couriers were valued so highly that some Pharaohs had them depicted on the walls of their tombs.
+Later, in the New Kingdom, royal couriers used horse-drawn chariots to move even faster across the kingdom, with dedicated relay stations along the way where a tired courier and horse could be exchanged for a fresh pair, much like the American Pony Express that would appear thousands of years later.
 
 But before we get to this revolution in communication technology, let's talk about these different ways of sending a message. A written letter can carry a fairly detailed and nuanced message.
-However, sending a message directly in the form of a written letter is generally \textit{\textbf{slow}} and suffers from \textit{\textbf{reliability issues}}.
-You may lose your pigeon, or your runner may become exhausted and just give up the task.
-If this happens you have to find another pigeon or runner and resend the message, provided that you are even aware that the message has not been delivered yet.
+However, sending a message directly in the form of a written letter is generally slow and suffers from reliability issues.
+You may lose your papyrus scroll, or your courier may become exhausted and just give up the task.
+If this happens you have to find another courier and resend the message, provided that you are even aware that the message has not been delivered yet.
 
-An alternative to direct transmission was \textit{\textbf{optical telegraphy}}.
-This is an old but ingenious method where the sender and the receiver share some pre-agreed signals.
-The sender uses some optical means in order to generate these signals such that the receiver can see them.
-A very good example is the Great Wall of China, which was designed and built to protect the northern border of the Chinese Empire.
-Due to its vast length, it was crucial to devise a communication system that could quickly relay messages between the guard towers located along the Wall.
-Whenever the enemy tried to attack the Wall, the nearest guard tower would light its signal fire, a pile of wood prepared in advance. This fire was then observed from the neighboring guard towers, which were approximately 2.5-5 kilometers apart.
-Then they would light their fires.
-Then their neighbors would see that and light their fires.
-This is how the message spread across large portions of the Wall very quickly.
-One drawback was that the \textit{\textbf{expressibility}} of this communication method was limited.
-Only certain messages could be sent.
-For example, the enemy is here or it's not, the fire is burning or it's not.
-One could develop this method a little bit further by introducing a second fire at each guard house.
-When one fire is burning, the enemy is there but in small numbers.
-When two fires are burning, the enemy is there in large numbers.
-Despite the limited expressiveness of this communication method, this system was very efficient and served well in protecting the Wall.
+An alternative to direct transmission was optical telegraphy. This is an old but ingenious method where the sender and the receiver share some pre-agreed signals. The sender uses some optical means in order to generate these signals such that the receiver can see them.
+A very good example of this comes once again from **Ancient Egypt**.
+During the **Middle Kingdom**, the **Pharaoh Senusret III** built a chain of massive mudbrick fortresses along the Nile in Lower Nubia, near the Second Cataract, at sites such as **Semna, Kumma, and Buhen**.
+These fortresses doubled as watchtowers, positioned within sight of one another across the river, and likely used simple visual signals, such as smoke by day or fire by night, to warn neighboring forts of approaching boats or raiders from the desert.
+As with any fire-based signal, the expressibility of this communication method was limited. Only certain messages could be sent, such as whether a threat had been spotted or not, or whether the fire was burning or not. One could extend this method a little further by lighting additional fires, so that the number of fires lit indicated the scale of the threat.
 
-\begin{figure}[t]
-    \centering
-    \includegraphics[width=0.7\textwidth]{lesson1/1-1_napoleon.pdf}
-    \caption[Napoleon's semaphore.]{Napoleon's semaphore encodings for the first seven letters of the alphabet.}
-    \label{fig:1-1_napoleon}
-\end{figure}
+Despite this limited expressiveness, the system was efficient at giving early warning.
+But for messages that needed far more detail than a signal fire could convey, the Nubian fortresses also relied on written reports, known today to Egyptologists as the **Semna Despatches**.
+These were papyrus documents written by officials stationed at the frontier, recording in detail the movement of traders, patrols, and travelers around the fortresses.
+They were carried by messenger back down the Nile to an official in the capital, Thebes, several hundred kilometers to the north.
+Unlike a simple signal fire, a written despatch could convey an essentially unlimited variety of messages, at the cost of taking much longer to arrive.
 
-Our last example of optical telegraphy is known as \textit{\textbf{Napoleon's semaphore}}.
-This system was a lot more expressive than the signalling system of the Great Wall.
-It worked on the basis of crane arms which could be arranged at certain angles.
-An operator controlled levers and pulleys in order to arrange the arms at various angles. Each configuration of the arms carried its own meaning.
-The leftmost arm configuration in Fig.~\ref{fig:1-1_napoleon} corresponds to the letter ``A".
-A network of semaphores, each located around 10 kilometers apart, spanned all of France.
-It was possible to send a message from Paris all the way to Venice, a distance of 1100 kilometers, in as little as few hours.
-The record time of sending a message between Paris and Strasbourg in the east of France, was an astounding 1 hour.
-This would have been unthinkable using the direct communication discussed above.
+As you can imagine, this dual approach also had its drawbacks. The fire-signal system required direct visual contact between fortresses, so it worked reliably only during the day and in clear weather, while a written despatch, however detailed, was only as fast as the messenger carrying it downriver.
 
-As you can imagine, there were some drawbacks to this method, the biggest one being that you had to have \textit{\textbf{direct visual contact}} with your neighboring semaphore.
-Therefore, the semaphore worked reliably only in good weather and during daytime.
-In addition, even though you could express an arbitrary message using this method, it was \textit{\textbf{physically demanding}} to operate the crane arms.
+This brings us finally to the advent of electrical telegraphy and the invention of the Morse code, which used electric signals to transmit messages and made both courier networks and fortress signal fires obsolete almost overnight. It worked by encoding the letters of the alphabet into a series of **dots and dashes**, as seen below.
 
-This brings us finally to the reason why the Pony Express operated only for a single year: the advent of \textit{\textbf{electrical telegraphy}} and the invention of the \textit{\textbf{Morse code}} that used electric signals to transmit messages.
-It worked by encoding the letters of the alphabet into a series of ``dots'' and ``dashes'' as seen in Fig~\ref{fig:1-1_morse}.
-An operator used a telegraph key to close an electric circuit to produce a signal of desired length.
-Closing the electric circuit for a short time produced a ``dot'' while keeping the circuit closed for a longer time produced a ``dash''.
-If the length of a ``dot'' is one unit, then a ``dash'' has length of 3 units.
-Parts of the same letter are separated by 1 unit.
-Different letters are separated by a space of 3 units while different words are separated by 7 units.
-A skilled operator could transmit up to 30 words per minute, which were decoded by an operator at a distant telegraph station and passed onto the intended recipient.
-This communication method allowed for messages to be delivered across greater lengths, spanning continents within minutes, making direct communication such as the Pony Express or optical telegraphy such as Napoleon's semaphore obsolete.
+<img width="447" height="447" alt="morse-code" src="https://github.com/user-attachments/assets/e9341dde-370e-4633-bb12-060f29a83b02" />
 
-\begin{figure}[t]
-    \centering
-    \includegraphics[width=0.8\textwidth]{lesson1/1-1_morse.pdf}
-    \caption{The Morse code.}
-    \label{fig:1-1_morse}
-\end{figure}
+An operator used a telegraph key to close an electric circuit to produce a signal of desired length. Closing the electric circuit for a short time produced a **dot**, while keeping the circuit closed for a longer time produced a **dash**. If the length of a dot is one unit, then a dash has length of 3 units. Parts of the same letter are separated by 1 unit. Different letters are separated by a space of 3 units while different words are separated by 7 units. A skilled operator could transmit up to 30 words per minute, which were decoded by an operator at a distant telegraph station and passed onto the intended recipient. This communication method allowed for messages to be delivered across greater lengths, spanning continents within minutes, making direct communication and optical telegraphy obsolete.
 
-Eventually, the electrical telegraph gave way to the \textit{\textbf{telephone}}, which implemented the dream of communication between humans using the human voice.
-Early telephone connections were simple point to point.
-As the demand for communicating via the telephone grew, it became clear the \textit{\textbf{all-to-all}} approach would not work.
-Imagine a network of $N$ telephones where all of them are directly connected to each other as seen in the left panel of Fig.~\ref{fig:1-1_telephone}.
-Consider adding a new telephone to the network.
-In order for the new user to be able to call any of the existing telephones on the network, we have to add $N$ physical connections to all of the existing telephones.
-Adding yet another telephone would require another $N+1$ connections.
-The all-to-all approach is intuitive but simply does not \textit{\textbf{scale}} with the size of the network.
+Eventually, the electrical telegraph gave way to the **telephone**, which implemented the dream of communication between humans using the human voice. Early telephone connections were simple point to point. As the demand for communicating via the telephone grew, it became clear the **all-to-all** approach would not work. Imagine a network of telephones where all of them are directly connected to each other. Consider adding a new telephone to the network. In order for the new user to be able to call any of the existing telephones on the network, we have to add a physical connection to each of the existing telephones. Adding yet another telephone would require yet more connections. The all-to-all approach is intuitive but simply does not scale with the size of the network.
 
-\begin{figure}[h]
-    \centering
-    \includegraphics[width=\textwidth]{lesson1/1-1_rotary_telephone.pdf}
-    \caption[Telephone networks.]{Various topologies for telephone networks.}
-    \label{fig:1-1_telephone}
-\end{figure}
+The solution came with the introduction of a switchboard. In order to call anybody on the network, each unit had to be connected only to the switchboard. You first called the switchboard, which would then connect you to the desired telephone unit. With this approach, adding a new telephone to the network required adding a single connection to the switchboard, presenting a **constant scaling**. In other words, the effort of adding new users to the network did not increase with the size of the network. Eventually, switchboards of different networks were interconnected together, allowing users from one network to call users on an entirely different network.
 
-The solution came with the introduction of a \textit{\textbf{switchboard}}.
-In order to call anybody on the network, each unit had to be connected only to the switchboard.
-You first called the switchboard, which would then connect you to the desired telephone unit.
-With this approach, adding a new telephone to the network required adding a single connection to the switchboard, presenting a \textit{\textbf{constant scaling}}.
-In other words, the effort of adding new users to the network did not increase with the size of the network.
-Eventually, switchboards of different networks were interconnected together, allowing users from one network to call users on an entirely different network.
+The Internet that our society has come to depend on so much works on the same principle. It is not a single network but a **network of networks**, allowing heterogeneous smaller networks to be interconnected. Nowadays, a message sent from a laptop can be read by its recipient half-way around the world on their phone within seconds. A broadcast stream of the FIFA World Cup Final can be enjoyed by millions around the world with minimal delay. We can even start the air conditioning in some modern cars remotely without having to leave the comfort of our house.
 
-The Internet that our society has come to depend on so much works on the same principle.
-It is not a single network but a \textit{\textbf{network of networks}}, allowing heterogeneous smaller networks to be interconnected.
-Nowadays, a message sent from a laptop can be read by its recipient half-way around the world on their phone within seconds.
-A broadcast stream of the FIFA World Cup Final can be enjoyed by millions around the world with minimal delay.
-We can even start the air conditioning in some modern cars remotely without having to leave the comfort of our house.
+## Analog to Digital
 
+The methods of communication described in the previous section were all very different from each other. However, at a fundamental level they all followed the same basic principle: a sender **encodes** her message into a form suitable for transmission. The encoded message is then sent to the **decoder**, which transforms the message back to a more easily readable form and passes it to the receiver.
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Analog to digital}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%
+To make this abstraction a little more concrete, let's consider the electrical telegraph as an example. The sender brings her message to an operator who knows how to use the Morse key. The operator uses the key to produce a series of dots and dashes, represented by short and long electrical signals which are transmitted to a distant telegraph station. There another operator receives these electrical signals, decodes them and reproduces the original message for the receiver.
 
+The immediate question that arises is finding some good ways of encoding the message. The first method that we consider is encoding the message using an **analog** signal. Analog signals can admit a continuum of values. We perceive the world around us as analog. The loudness of sounds varies continuously from a quiet whisper to a loud music concert. The temperature rises and falls in a continuous way as measured by our thermometers. The three primary colors can be mixed together to produce a continuous spectrum of colors. Humans have evolved to process these types of analog signals; therefore, it makes sense to try using analog signals to encode our messages. The key is that analog signals can take on values from a continuous interval, representing the range of some quantity. For example, the voltage of an electric circuit can vary continuously depending on the pressure of sound waves in the microphone of an old telephone. Early AM radio signals and old TV broadcasting used continuous sinusoidal waves that required simple technology to produce and decode.
 
-The methods of communication described in the previous section were all very different from each other.
-However, at a fundamental level they all followed the same basic principle depicted in Fig.~\ref{fig:1-2_communication}.
-A sender \textit{\textbf{encodes}} her message into a form suitable for transmission.
-The encoded message is then sent to the \textit{\textbf{decoder}}, which transforms the message back to a more easily readable form and passes it to the receiver.
-To make this abstraction a little more concrete, let's consider the electrical telegraph as an example.
-The sender brings her message to an operator who knows how to use the Morse key.
-The operator uses the key to produce a series of dots and dashes, represented by short and long electrical signals which are transmitted to a distant telegraph station.
-There another operator receives these electrical signals, decodes them and reproduces the original message for the receiver.
+One problem with analog signals is that they are **susceptible to noise**. Even small changes to the signal can alter the meaning of the transmitted message. Due to this sensitivity to noise, analog signals are also difficult to copy. Every time an analog signal gets copied, it degrades in quality due to both the noise as well as the finite accuracy of the signal read out.
 
-\begin{figure}[t]
-    \centering
-    \includegraphics[width=0.7\textwidth]{lesson1/1-2_communication.pdf}
-    \caption[Abstraction of communication.]{Abstract representation of communication between a sender and a receiver.}
-    \label{fig:1-2_communication}
-\end{figure}
+A clean analog signal looks like a smooth wave; the same signal affected by noise looks jagged and irregular. The noisy signal may have a meaning similar to the original noiseless message, or may be quite different.
 
-The immediate question that arises is finding some good ways of encoding the message.
-The first method that we consider is encoding the message using an \textit{\textbf{analog}} signal.
-Analog signals can admit a continuum of values.
-We perceive the world around us as analog.
-The loudness of sounds varies continuously from a quiet whisper to a loud music concert.
-The temperature rises and falls in a continuous way as measured by our thermometers.
-The three primary colors can be mixed together to produce a continuous spectrum of colors.
-Humans have evolved to process these types of analog signals; therefore, it makes sense to try using analog signals to encode our messages.
-The key is that analog signals can take on values from a continuous interval, representing the range of some quantity.
-For example, the voltage of an electric circuit can vary continuously depending on the pressure of sound waves in the microphone of an old telephone.
-Early AM radio signals and old TV broadcasting used continuous sinusoidal waves that required simple technology to produce and decode.
+An alternative to analog signals is **digital** signals. Digital signals are very different from analog signals; they only use a discrete set of values to represent the message and encode it. We can take the original analog signal, and try to encode it digitally. A way to do this is to **sample** the analog signal at discrete time steps $t_0$, $t_1$, $t_2$, $t_3$ and so on. The encoded digital signal is now a set of discrete values, $S_0, S_1, S_2, S_3, \ldots$, each of some finite accuracy.
 
-\begin{figure}[t]
-    \centering
-    \includegraphics[width=\textwidth]{lesson1/1-2_signals.pdf}
-    \caption[Continuous and discrete signals.]{Analog signal subjected to noise on the left. The right figure shows how the analog signal can be discretized by sampling at a fixed time interval.}
-    \label{fig:1-2_signals}
-\end{figure}
+The accuracy with which we can reproduce this analog signal depends on how often we look at and measure the signal, which is known as the **sampling rate**, and the precision of each sample, i.e. the number of discrete values that are used. For slowly varying signals, we don't have to sample that often, while still doing a pretty good job of encoding the analog signal accurately. But for analog signals that vary quickly, we should sample with higher frequency.
 
-One problem with analog signals is that they are \textit{\textbf{susceptible to noise}}.
-Even small changes to the signal can alter the meaning of the transmitted message.
-Due to this sensitivity to noise, analog signals are also difficult to copy.
-Every time an analog signal gets copied, it degrades in quality due to both the noise as well as the finite accuracy the signal read out.
+Digital signals are less affected by noise and are therefore easier to copy. Other advantages include the ease of producing digital signals and the ease of processing with digital logic.
 
-Figure~\ref{fig:1-2_signals} shows a clean analog sinusoidal signal in orange.
-The blue jagged line represents the original signal affected by noise.
-The noisy signal may have a meaning similar to the original noiseless message or may be quite different.
+## Bits as Building Blocks
 
-An alternative to analog signals is \textit{\textbf{digital}} signals.
-Digital signals are very different from analog signals; they only use a discrete set of values to represent the message and encode it.
-We can take the original analog signal, and try to encode it digitally.
-A way to do this to \textit{\textbf{sample}} the analog signal at discrete time steps $t_0$, $t_1$, $t_2$, $t_3$ and so on, as shown on the right side of Fig.~\ref{fig:1-2_signals}.
-The encoded digital signal is now a set of discrete values,
-\begin{equation}
-    S_0, S_1, S_2, S_3, \ldots,
-\end{equation}
-each of some finite accuracy.
+We have seen that digital signals can be more practical than analog signals when it comes to communication. The question now is how do we represent these digital signals.
 
-The accuracy with which we can reproduce this analog signal depends on how often we look at and measure the signal, which is known as the \textit{\textbf{sampling rate}}, and the precision of each sample, i.e. the number of discrete values that are used.
-For slowly varying signals, we don't have to sample that often, while still doing a pretty good job of encoding the analog signal accurately.
-But for analog signals that vary quickly, we should sample with higher frequency.
+We saw an example of a digital system with the Nubian fortress signal fires described earlier. Let's go back and consider it again. Recall that a single sentry could light one fire to signal that a threat had been spotted, and that additional fires could be lit side by side to signal a larger-scale threat.
 
-Digital signals are less affected by noise and are therefore easier to copy.
-Other advantages include the ease of producing digital signals and the ease of processing with digital logic.
+What does it take to change the state of this signal? Going from no fire to a single fire burning does not require that much effort. A lone guard simply has to light the one pile of wood that has already been prepared. On the other hand, going from no fire to three fires burning at once, signalling that a large force is approaching, requires much more effort. Several guards must prepare and light multiple fires within a short window of time so that the signal is unambiguous to the neighboring fortress. This change requires both more physical effort as well as more time.
 
+A good representation for digital signals should require as little effort and time as possible in order to change the state of the digital signal. This suggests that having fewer internal states produces a better encoding for the message. The Morse code is such an example, where we only have two internal states. The letter "U" is encoded by two dots followed by a dash. The signal is switched on for a short time to represent a dot and for a long time to represent the dash. It is the presence or absence of a signal that conveys the information. When you change from *no signal* to *signal*, or when the signal *doesn't* change, this carries a small amount of information.
 
-\section{Bits as building blocks}
+This unit of information is known as a **bit**, which is short for **binary digit**. In classical computation and in digital communication, the bit is the basic unit of information. It conveys the message of something being true or false, the signal being on or off. Usually we write the two states of a bit as 0 or 1. The signal encoding the letter "U" in Morse code can be written using bits as 1010111, where zeros and ones denote the state of the bit at different times. Even after being affected by noise, the different states of a bit can still be easily distinguished from each other, hence the meaning of the message can be read out without any ambiguity. Digital signals are generally more resilient to noise than analog signals.
 
+We have said that a single bit can hold two different values. How many different values can multiple bits, also called **bit strings**, hold? The following table lists all possible bit string values for 1, 2, 3, and 4 bits.
 
-We have seen that digital signals can be more practical than analog signals when it comes to communication.
-The question now is how do we represent these digital signals.
-We saw an example of a digital system with Napoleon's semaphore.
-Let's go back and consider it again.
-In order to send a message, for example ``WAR IS OVER'', the arms have to be rearranged as shown in Fig.~\ref{fig:1-3_warisover}.
+| Number of bits | Possible bit strings | Total number |
+|---|---|---|
+| 1 | 0, 1 | 2 |
+| 2 | 00, 01, 10, 11 | 4 |
+| 3 | 000, 001, 010, 011, 100, 101, 110, 111 | 8 |
+| 4 | 0000, 0001, 0010, 0011, 0100, 0101, 0110, 0111, 1000, 1001, 1010, 1011, 1100, 1101, 1110, 1111 | 16 |
 
-\begin{figure}[t]
-    \centering
-    \includegraphics[width=0.8\textwidth]{lesson1/1-3_warisover.pdf}
-    \caption[Message with Napoleon's semaphore.]{Encoding a short message using Napoleon's semaphore.}
-    \label{fig:1-3_warisover}
-\end{figure}
-
-What does it take to change the state of the semaphore?
-Changing the state of the semaphore from ``A'' to ``R'' does not require that much effort.
-All we have to do is change the state of one of the side arms and fold it onto the main arm.
-On the other had, going from ``W'' to ``A'' requires changing the state of the main arm as well as the two side arms.
-This change requires both physical effort as well as longer time.
-
-\begin{figure}[t]
-    \centering
-    \includegraphics[width=\textwidth]{lesson1/1-3_morse_signal.pdf}
-    \caption[Morse code signal.]{Physical representation of the Morse code signal for the letter ``U''. The desired ideal signal is on the left, and the noisy signal is on the right. Even with noise, it is easy to recover the original message.}
-    \label{fig:1-3_morse_signal}
-\end{figure}
-
-A good representation for digital signals should require as little effort and time as possible in order to change the state of the digital signal.
-This suggests that having fewer internal states produces a better encoding for the message.
-The Morse code is such an example, where we only have two internal states.
-The letter ``U'' is encoded by two dots followed by a dash.
-The physical signal that represents this encoding is shown in Fig. \ref{fig:1-3_morse_signal}.
-The signal is switched on for a short time to represent a dot and for a long time to represent the dash.
-It is the presence or absence of a signal that conveys the information.
-When you change from \emph{no signal} to \emph{signal}, or when the signal \emph{doesn't} change, this carries a small amount of information.
-
-This unit of information is known as a \textit{\textbf{bit}}, which is short for \textit{\textbf{binary digit}}.
-In classical computation and in digital communication, the bit is the basic unit of information.
-It conveys the message of something being true or false, the signal being on or off.
-Usually we write the two states of a bit as 0 or 1.
-The signal on the left of Fig.~\ref{fig:1-3_morse_signal} encoding the letter ``U'' in Morse code can be written using bits as 1010111, where zeros and ones denote the state of the bit at different times.
-The right side of Fig.~\ref{fig:1-3_morse_signal} shows how the clean signal looks after being affected by noise.
-The different states of the bit can still be easily distinguished from each other, hence the meaning of the message can be read out without any ambiguity.
-Digital signals are generally more resilient to noise than analog signals.
-
-We have said that a single bit can hold two different values.
-How many different values can multiple bits, also called \textit{\textbf{bit strings}} hold?
-The following table lists all possible bit string values for 1, 2, 3, and 4 bits.
-\begin{table}[ht]
-    \centering
-    \begin{tabular}{c|c|c}
-        Number of bits  & Possible bit strings & Total number \\
-        \hline
-        1 & 0, 1 & 2 \\
-        2 & 00, 01, 10, 11 & 4 \\
-        3 & 000, 001, 010, 011, 100, 101, 110, 111 & 8 \\
-        4 & 0000, 0001, 0010, 0011, 0100, 0101, 0110, 0111 & 16 \\
-        & 1000, 1001, 1010, 1011, 1100, 1101, 1110, 1111 & 
-    \end{tabular}
-\end{table}
 It is clear that the total number of possible bit string values for $N$ bits is $2^N$.
 
-Bits can be used to encode decimal numbers.
-Let's examine how decimal notation works.
-The decimal system uses ten numerals, 0-9.
-In a decimal number, the rightmost digit represents ones, the next digit to the left represents tens, the next hundreds and so on.
-For example, the number 1024 can be written in terms of powers of ten as follows,
-\begin{equation}
-    1024 = 1 \times 10^3 + 0 \times 10^2 + 2 \times 10^1 + 4 \times 10^0.
-\end{equation}
-This idea carries over to binary numbers where the digits can only take values of 0 or 1, and represent multiples of powers of two.
-Let's see how we can write the binary number 1001 in decimal notation,
-\begin{equation}
-    1001 = 1 \times 2^3 + 0 \times 2^2 + 0 \times 2^1 + 1 \times 2^0 = 9.
-\end{equation}
-
-Bits are the building blocks of modern communication.
-They are robust to noise, can be easily used to encode and decode information, and are easy for modern computers to process.
-Given that bits admit only two values, we might easily consider them to be the most fundamental units of information.
-In these lectures, we will learn that this is not quite true.
-We will see that quantum communication relies on more fundamental units of information.
-Classical bits are merely special cases of their quantum cousins.
-
-
-\section{Quantum communication}
-
-Information is physical (an aphorism coined by Rolf Landauer).
-It is carried by physical systems. The laws of physics determine how we can process or communicate this information.
-If we are only considering information processing in the context of classical mechanics, classical electromagnetism, and classical optics, then this will give us tools and ways of processing and communicating the information classically.
-However, if we expand our toolbox to include also quantum mechanics and quantum optics, then we are also expanding the ways in which we can process and communicate this information.
-
-The question that we should answer before we start learning about quantum communication is, why do we need quantum mechanics?
-Why do we want to use quantum mechanics to process and communicate information? First, quantum mechanics is the fundamental theory of nature as we currently understand it.
-It describes the microscopic world where classical mechanics does not apply.
-It makes some stunning predictions, which, despite their counter-intuitiveness, have been tested very thoroughly over many decades.
-So far, the theory has always been proven correct.
-Furthermore, considering new laws of physics, and applying them to information processing and communication, often leads to new ways of processing and communicating this information.
-
-These reasons in themselves are very fundamental, but there are also practical reasons.
-Current computing technology is hitting a classical to quantum boundary.
-Maybe you have heard of Moore's law, which despite its name is an observation rather than a physical law.
-Moore's Law states that the number of transistors in an integrated circuit doubles about every two years.
-It is astonishing that this observation has held for decades.
-Chip manufacturers now can pack about ten orders of magnitude more transistors into the same area than when integrated circuits were first invented. The chips themselves are not getting any bigger, so in order for Moore's Law to hold, the transistors must get smaller and smaller.
-In the beginning, the transistors were approximately 10 microns across.
-In the 1990s, they moved to about 600 nanometers.
-Now, we are at the level of single-digit nanometers.
-The transistors have gotten so small that we need to worry about the effects that quantum mechanics has on the transistors' operation.
-
-\begin{figure}[t]
-    \centering
-    \includegraphics[width=0.8\textwidth]{lesson1/1-4_transistors.pdf}
-    \caption[Moore's law.]{Number of transistors on a microprocessor has been doubling nearly every two years.}
-    \label{fig:1-4_transistors}
-\end{figure}
-
-What are the two main ingredients that set quantum communication apart from its classical counterpart?
-The first one is the \textit{\textbf{superposition principle}}.
-This principle is not really anything new, as it is observed in the classical world as well.
-We are all familiar with superposition of waves.
-What is meant by superposition principle in quantum communication is the ability of quantum bits to be in a superposition of their usual classical states.
-The possibility of a quantum bit to be both on and off at the same time is mind-bending but is at the heart of quantum communication.
-
-Expanding the principle of superposition to multiple particles, we arrive at the concept of \textit{\textbf{entanglement}}.
-Entanglement has no classical counterpart whatsoever.
-It correlates distant quantum objects across large distances of space much more strongly than is possible using classical laws of nature.
-The beauty of entanglement is that it allows for radically new ways to communicate and is used as a resource in quantum communication.
-Distribution of entanglement is therefore one of the main jobs of quantum networks.
-
-Quantum communication protocols are currently very difficult to implement.
-Quantum systems are very delicate as they \textit{\textbf{decohere}} extremely rapidly, leading to loss of their quantum properties.
-They go from being true and false at the same time, to being only true or only false.
-Basically, they just become classical bits.
-
-Quantum systems are difficult to build at the hardware level, but at the same time, it is also conceptually challenging to think about new ways of exploiting their quantum properties.
-Designing new protocols for processing and communication in the quantum realm requires new tools.
-It requires a completely new mental framework for how we approach problems, and how we solve problems.
-This all seems very daunting but these challenges should be viewed as opportunities.
-Quantum computation and quantum communication are vibrant and cross-disciplinary fields.
-Engineers, physicists, mathematicians, and computer scientists are all working together on cracking difficult questions whose solutions will lead to incredible new quantum technologies.
-
-\section{Security in the quantum age}
-
-Quantum technologies carry the potential to impact a number of important areas.
-Quantum simulation and computation are thought to bring about new methods in developing materials with novel and useful properties, as well as novel drugs.
-Quantum metrology allows for measurements with unprecedented resolution and sensitivity.
-Quantum machine learning aims to exploit the properties of quantum mechanics to enhance artificial intelligence.
-Lastly, you may have heard that quantum computers will be able to crack some widely used encryption schemes deployed currently, which may sound like a doomsday scenario.
-Since these lecture notes focus on quantum communication, we will briefly discuss what this claim means and show how quantum technologies can also enhance security.
-
-\begin{figure}[t]
-    \centering
-    \includegraphics[width=0.5\textwidth]{lesson1/1-5_security.pdf}
-    \caption[Security in the quantum age.]{An eavesdropper is trying to intercept and decrypt the message sent from the sender to the receiver.}
-    \label{fig:1-5_security}
-\end{figure}
-
-Computer security experts sometimes refer to the "CIA triad"\index{CIA triad} of \emph{confidentiality}\index{confidentiality}, \emph{integrity}\index{integrity}, and \emph{availability}\index{availability}. \emph{Encryption}\index{encryption} refers to a set of mathematical techniques for protecting digital information, making it difficult to read or to modify undetected, often used to achieve one of the CIA goals. In this book, we will loosely refer to "security" to mean this use of encryption.
-
-Let's consider a sender wishing to send a message to a receiver, as pictured in Fig.~\ref{fig:1-5_security}.
-The message might be something mundane such as ``Buy some milk, please'' or might be something sensitive such as ``My credit card number is ...''.
-Either way, messages sent over public channels are encrypted to preserve the privacy of the conversation between the sender and the receiver.
-Let's consider a third party, an eavesdropper, who is trying to listen in on the conversation by intercepting the message.
-The most commonly deployed urrent classical encryption techniques offer \textit{\textbf{computational security}}, meaning that cracking them is not impossible, merely very difficult and would require enormous classical resources.
-Quantum algorithms exist that have the potential to break this encryption if they capture the message sequence starting from the initial exchange.
-An eavesdropper with access to a quantum computer could in principle intercept the encrypted message, use their quantum computer to break the code and listen in on the conversation with impunity.
-
-To overcome this problem, the communicating parties need to resort to using \textit{\textbf{quantum key distribution}} (QKD).
-With the help of the superposition principle or entanglement, the sender and the receiver can discover the eavesdropper's attempts to intercept and tamper with their messages.
-They can then simply not transmit their sensitive message.
-This method of encryption offers \textit{\textbf{information-theoretic security}}.
-Such security does not rely on the computational difficulty of certain mathematical problems and therefore is stronger than the computational security used currently (or at least offers a different attack surface).
-For this reason, QKD is one of the primary applications of quantum networks.
-We will explore the basics of QKD later in this book.
-
-\section{Module Overview}
-\label{sec:mod-over}
-
-Before concluding the first chapter, let's have a brief look at the structure of this module.
-The next three chapters deal with the basics of quantum mechanics relevant to quantum communication.
-We will learn about quantum bits and how they are different from classical bits, consider how noise affects the state of quantum states and how we can describe this effect mathematically.
-Finally, we will look at systems of multiple quantum bits, including entanglement and SPDC, a critical method of creating entanglement in optical systems.
-
-Chapters 5-7 deal with the basics of optics.
-Light is an excellent information carrier and we will learn how lasers produce light.
-We will discuss interference, one of the fundamental phenomena in both classical as well as quantum physics.
-We will conclude this block of chapters by learning about waveguides and how light is guided in a network.
-
-Chapters 8-10 look at fundamental quantum communication protocols.
-We will learn how teleportation can be used to transmit information without sending the physical system encoding this information as well as how quantum key distribution works.
-
-In chapters 11-13, we will look at the basics of quantum repeaters, a quantum technology that makes long-distance quantum communication possible.
-The last two chapters look at quantum repeater systems.
-
-There are some basic prerequisites for this module such as linear algebra (meaning vector and matrix multiplication; eigenvectors and eigenvalues; also, we will use the tensor product which will be introduced in this book), discrete probability, and complex numbers (e.g., $i = \sqrt{-1}$ and Euler's equation, $e^{i\pi} + 1 = 0$).  The description of how lasers amplify light in Sec.~\ref{sec:5-4_lasers2} makes minimal use of derivatives from elementary calculus, but the core discussion is designed to be understandable without a background in calculus.  It's very helpful if you have some introduction to quantum computing; programming and classical computing; and computer networks.
-Other than that there are no physics requirements.
-
-If you don't have some of this background yet, there are a lot of online materials, particularly our MOOC (massively open online course), "Understanding Quantum Computers", which is targeted at learners at the high school level and requires very minimal math.
-It is available in English, Japanese, Thai and Indonesian.
-If you would like to learn a little bit more about some basic linear algebra you can have a look at the playlist on Professor Van Meter's YouTube channel. There are many other courses available. Other modules from the Quantum Academy of Science and Technology (supported by the Q-Leap Education office in Japan) cover some of this background material as well, and may be available to you.
-
-
-% \begin{figure}[H]
-%     \centering
-%     \includegraphics[width=0.9\textwidth]{lesson1/communication.eps}
-%     \label{fig:1-1}
-%     \caption{Evolution of communication.}
-% \end{figure}
-
-% insert photo here
-% \begin{figure}[H]
-%     \centering
-%     \includegraphics[width=0.6\textwidth]{lesson1/ponyexpress.eps}
-%     \label{fig:1-2}
-%     %\justification=<centering>
-%     \caption{Pony Express.}
-% \end{figure}
-
-% insert photo here
-% \begin{figure}[H]
-%     \centering
-%     \includegraphics[width=0.9\textwidth]{lesson1/万里の長城.eps}
-%     \label{fig:1-3}
-%     \caption{The Great Wall of China.}
-% \end{figure}
-
-% Insert photo here
-% \begin{figure}[H]
-%     \centering
-%     \includegraphics[width=0.9\textwidth]{lesson1/napoleon.eps}
-%     \label{fig:1-4}
-%     \caption{Napoleon's semaphore.}
-% \end{figure}
-
-% insert photo here. TODO: How to make these side-by-side?
-% \begin{figure}[H]
-%     \includegraphics[width=0.3\textwidth]{lesson1/morse.eps}
-%     \label{fig:1-5}
-%     \caption{Morse signal.}
-% \end{figure}
-% \begin{figure}[H]
-%     \includegraphics[width=0.3\textwidth]{lesson1/morsekey.eps}
-%     \label{fig:1-6}
-%     \caption{Morse key.}
-% \end{figure}
-% \iffalse
-% \begin{figure}
-%     \centering
-%     \begin{minipage}{0.45\textwidth}
-%         \centering
-%         \includegraphics[width=0.9\textwidth]{lesson1/morse.eps} % first figure itself
-%         \caption{first figure}
-%     \end{minipage}\hfill
-%     \begin{minipage}{0.45\textwidth}
-%         \centering
-%         \includegraphics[width=0.9\textwidth]{lesson1/morsekey.eps} % second figure itself
-%         \caption{second figure}
-%     \end{minipage}
-% \end{figure}
-% \fi
-
-% Insert point-to-point pic here
-% \begin{figure}[H]
-%     \includegraphics[width=0.8\textwidth]{lesson1/pointpoint.eps}
-%     \label{fig:1-7}
-%     \caption{Point-to-point.}
-% \end{figure}
-
-% Insert switchboard pic here.
-% \begin{figure}[H]
-%     \includegraphics[width=0.8\textwidth]{lesson1/switchboard.eps}
-%     \label{fig:1-8}
-%     \caption{Switchboard.}
-% \end{figure}
-% insert internet pic here
-% \begin{figure}[H]
-%     \includegraphics[width=0.8\textwidth]{lesson1/internet.eps}
-%     \label{fig:1-9}
-%     \caption{The Internet.}
-% \end{figure}
-% insert picture here
-% \begin{figure}[H]
-%     \includegraphics[width=0.8\textwidth]{lesson1/internetmap.eps}
-%     \label{fig:1-10}
-%     \caption{Network of networks.}
-% \end{figure}
-
-% \begin{figure}[H]
-%     \includegraphics[width=0.8\textwidth]{lesson1/sender_receiver.eps}
-%     \label{fig:1-11}
-%     \caption{Sender and receiver.}
-% \end{figure}
-
-
-% insert continuous signal picture.
-% \begin{figure}[H]
-%     \includegraphics[width=0.8\textwidth]{lesson1/continuoussignal.eps}
-%     \label{fig:1-12}
-%     \caption{Analog communication}
-% \end{figure}
-
-% insert continuous signal w/ disruptive noise included here. 
-% \begin{figure}[H]
-%     \includegraphics[width=0.8\textwidth]{lesson1/continuous_signal_noise.eps}
-%     \label{fig:1-13}
-%     \caption{Analog signal and noise.}
-% \end{figure}
-
-% Insert discrete digital signal pic  w/ t_0, t_1, t_2 here
-% \begin{figure}[H]
-%     \centering
-%     \includegraphics[width=0.8\textwidth]{lesson1/discre_signal.eps}
-%     \label{fig:1-14}
-%     \begin{center}
-%         \caption{Discrete signals.}
-%     \end{center}
-% \end{figure}
-
-% insert war is over
-% \begin{figure}[H]
-%     \centering
-%     \includegraphics[width=0.5\textwidth]{lesson1/warisover.pdf}
-%     \label{fig:1-15}
-%     \begin{center}
-%         \caption{Letters spelling "War is over".}
-%     \end{center}
-% \end{figure}
-
-% Insert A -> R, W -> 10 
-% \begin{figure}[H]
-%     \centering
-%     \includegraphics[width=0.8\textwidth]{lesson1/a_to_r.pdf}
-%     \label{fig:1-16}
-%     \begin{center}
-%         \caption{Letters.}
-%     \end{center}
-% \end{figure}
-
-% Insert U encoding
-% \begin{figure}[H]
-%     \centering
-%     \includegraphics[width=0.8\textwidth]{lesson1/letter_u.pdf}
-%     \label{fig:1-17}
-%     \begin{center}
-%         \caption{Morse code letter U.}
-%     \end{center}
-% \end{figure}
-
-% insert morse graph
-% \begin{figure}[H]
-%     \centering
-%     \includegraphics[width=0.8\textwidth]{lesson1/presence_abscence.pdf}
-%     \label{fig:1-18}
-%     \begin{center}
-%         \caption{Morse code.}
-%     \end{center}
-% \end{figure}
-
-% \begin{figure}[H]
-%     \centering
-%     \includegraphics[width=0.8\textwidth]{lesson1/presence_abscence_bit.pdf}
-%     \label{fig:1-19}
-%     \begin{center}
-%         \caption{Bits.}
-%     \end{center}
-% \end{figure}
-% insert graph w/ noise
-% \begin{figure}[H]
-%     \centering
-%     \includegraphics[width=0.8\textwidth]{lesson1/presence_abscence_noise.pdf}
-%     \label{fig:1-20}
-%     \begin{center}
-%         \caption{Presence or absence as a bit.}
-%     \end{center}
-% \end{figure}
-
-% insert bit permutations slide
-% \begin{figure}[H]
-%     \centering
-%     \includegraphics[width=0.8\textwidth]{lesson1/binary_notation.pdf}
-%     \label{fig:1-21}
-%     \begin{center}
-%         \caption{Binary notation.}
-%     \end{center}
-% \end{figure}
-
-% insert decimal notation
-% \begin{figure}[H]
-%     \centering
-%     \includegraphics[width=0.8\textwidth]{lesson1/decimal_notation.pdf}
-%     \label{fig:1-22}
-%     \begin{center}
-%         \caption{Decimal notation.}
-%     \end{center}
-% \end{figure}
-
-% insert binary notation
-% \begin{figure}[H]
-%     \centering
-%     \includegraphics[width=0.8\textwidth]{lesson1/binary_ex.pdf}
-%     \label{fig:1-23}
-%     \begin{center}
-%         \caption{Binary notation.}
-%     \end{center}
-% \end{figure}
-
-% Insert classical VS quantum slide
-% \begin{figure}[H]
-%     \centering
-%     \includegraphics[width=0.8\textwidth]{lesson1/comparsion.pdf}
-%     \label{fig:1-24}
-%     \begin{center}
-%         \caption{Classical and quantum.}
-%     \end{center}
-% \end{figure}
-
-% Moore's law graph
-% \begin{figure}[H]
-%     \centering
-%     \includegraphics[width=0.8\textwidth]{lesson1/moore_law.pdf}
-%     \label{fig:1-25}
-%     \begin{center}
-%         \caption{Moore's Law.}
-%     \end{center}
-% \end{figure}
-
-
-
-
-% insert unencrytped msg pic (milk please)
-% 
-
-% insert credit card info 
-% \begin{figure}[H]
-%     \centering
-%     \includegraphics[width=0.8\textwidth]{lesson1/creditcardinfo.pdf}
-%     \label{fig:1-26}
-%     \begin{center}
-%         \caption{Unencrypted communication: an eavesdropper overhearing your credit card information is much more likely to be a problem.}
-%     \end{center}
-% \end{figure}
-% encrypted msg pic.
-% \begin{figure}[H]
-%     \centering
-%     \includegraphics[width=0.8\textwidth]{lesson1/credit_card_info_eavesdropper.pdf}
-%     \label{fig:1-28}
-%     \begin{center}
-%         \caption{Encrypted communication.}
-%     \end{center}
-% \end{figure}
-
-% insecure channel pic.
-% \begin{figure}[H]
-%     \centering
-%     \includegraphics[width=0.8\textwidth]{lesson1/eavesdropper_Q_comp.pdf}
-%     \label{fig:1-29}
-%     \begin{center}
-%         \caption{Eavesdropper with a quantum computer.}
-%     \end{center}
-% \end{figure}
-
-% Quantum Channel "STOP" pic
-% \begin{figure}[H]
-%     \centering
-%     \includegraphics[width=0.8\textwidth]{lesson1/insecure_channel_stop.pdf}
-%     \label{fig:1-30}
-%     \begin{center}
-%         \caption{Insecure quantum channel stops.}
-%     \end{center}
-% \end{figure}
-
-
-
-% \section{(XXX Is a section break needed here?)}
-
-
-% insert course overview pic
-% \begin{figure}[H]
-%     \centering
-%     \includegraphics[width=0.8\textwidth]{lesson1/module_overview.pdf}
-%     \label{fig:1-31}
-%     \begin{center}
-%         \caption{Module overview.}
-%     \end{center}
-% \end{figure}
-
-% insert pre-requisities slide 
-% \begin{figure}[H]
-%     \centering
-%     \includegraphics[width=0.8\textwidth]{lesson1/prereqs.pdf}
-%     \label{fig:1-32}
-%     \begin{center}
-%         \caption{Prerequisites.}
-%     \end{center}
-% \end{figure}
-
-% Rod videos pic
-% \begin{figure}[H]
-%     \centering
-%     \includegraphics[width=1.1\textwidth]{lesson1/lin_alg_vids.pdf}
-%     \label{fig:1-33}
-%     \begin{center}
-%         \caption{Linear Algebra videos.}
-%     \end{center}
-% \end{figure}
-
-% \url{http://www.youtube.com/playlist?list=PLibMrvP9xUbeWZ1pCKnbTn2FO-c1PqHZr}.
-
-% \newpage
-% \begin{exercises}
-% \exer{For Hooker's data, Exercise 1.2, use the Box and Cox and Atkinson procedures to determine a appropriate transformation of PRES
-% in the regression of PRES on TEMP. find $\hat\lambda$, $\tilde\lambda$,
-% the score test, and the added variable plot for the score. 
-% Summarize the results.}
-
-% \subexer{The following data were collected in a study of the effect of dissolved sulfur
-% on the surface tension of liquid copper (Baes and Killogg, 1953).}
-
-
-% \blankline
-% \begin{tabular}{r@{}lcc}
-% \hline
-% &&\multicolumn2c{$Y$= Decrease in Surface Tension}\\
-% \multicolumn2c{$x$ = Weight \% sulfur}
-% &\multicolumn2c{(dynes/cm), two Replicates}\\
-% \hline
-% 0.&034&301&316\\
-% 0.&093&430&422\\
-% 011.&30&593&586\\
-% \hline
-% \end{tabular}
-% \blankline
-
-% \subexer{Find the transformations of $X$ and $Y$ sot that in the transformed scale 
-% the regression is linear.}
-
-% \subexer{Assuming that $X$ is transformed to $\ln(X)$, which choice of $Y$ gives 
-% better results,
-% $Y$ or $\ln(Y)$? (Sclove, 1972).}
-
-% \sidebysidesubsubexer{In the case of $\Delta_1$?}{In the case of $\Delta_2$?}
-
-% \exer{Examine the Longley data, Problem 3.3, for applicability of assumptions of the
-% linear model.}
-
-% \sidebysidesubexer{In the case of $\Gamma_1$?}{In the case of $\Gamma_2$?}
-% \[
-%     t= \frac{5}{256}\, \frac{c^5}{G^3}\,
-%     \frac{r^4}{(m_1m_2)(m_1+m_2)}.  
-% \]
-
-% \end{exercises}
+Bits can be used to encode decimal numbers. Let's examine how decimal notation works. The decimal system uses ten numerals, 0-9. In a decimal number, the rightmost digit represents ones, the next digit to the left represents tens, the next hundreds and so on. For example, the number 1024 can be written in terms of powers of ten as follows:
 
+$$
+1024 = 1 \times 10^3 + 0 \times 10^2 + 2 \times 10^1 + 4 \times 10^0
+$$
+
+This idea carries over to binary numbers where the digits can only take values of 0 or 1, and represent multiples of powers of two. Let's see how we can write the binary number 1001 in decimal notation:
+
+$$
+1001 = 1 \times 2^3 + 0 \times 2^2 + 0 \times 2^1 + 1 \times 2^0 = 9
+$$
+
+Bits are the building blocks of modern communication. They are robust to noise, can be easily used to encode and decode information, and are easy for modern computers to process. Given that bits admit only two values, we might easily consider them to be the most fundamental units of information. In these lectures, we will learn that this is not quite true. We will see that quantum communication relies on more fundamental units of information. Classical bits are merely special cases of their quantum cousins.
+
+## Quantum Communication
+
+Information is physical (an aphorism coined by Rolf Landauer). It is carried by physical systems. The laws of physics determine how we can process or communicate this information. If we are only considering information processing in the context of classical mechanics, classical electromagnetism, and classical optics, then this will give us tools and ways of processing and communicating the information classically. However, if we expand our toolbox to include also quantum mechanics and quantum optics, then we are also expanding the ways in which we can process and communicate this information.
+
+The question that we should answer before we start learning about quantum communication is, why do we need quantum mechanics? Why do we want to use quantum mechanics to process and communicate information? First, quantum mechanics is the fundamental theory of nature as we currently understand it. It describes the microscopic world where classical mechanics does not apply. It makes some stunning predictions, which, despite their counter-intuitiveness, have been tested very thoroughly over many decades. So far, the theory has always been proven correct. Furthermore, considering new laws of physics, and applying them to information processing and communication, often leads to new ways of processing and communicating this information.
+
+These reasons in themselves are very fundamental, but there are also practical reasons. Current computing technology is hitting a classical to quantum boundary. Maybe you have heard of Moore's law, which despite its name is an observation rather than a physical law. Moore's Law states that the number of transistors in an integrated circuit doubles about every two years. It is astonishing that this observation has held for decades. Chip manufacturers now can pack about ten orders of magnitude more transistors into the same area than when integrated circuits were first invented. The chips themselves are not getting any bigger, so in order for Moore's Law to hold, the transistors must get smaller and smaller. In the beginning, the transistors were approximately 10 microns across. In the 1990s, they moved to about 600 nanometers. Now, we are at the level of single-digit nanometers. The transistors have gotten so small that we need to worry about the effects that quantum mechanics has on the transistors' operation.
+
+What are the two main ingredients that set quantum communication apart from its classical counterpart? The first one is the **superposition principle**. This principle is not really anything new, as it is observed in the classical world as well. We are all familiar with superposition of waves. What is meant by superposition principle in quantum communication is the ability of quantum bits to be in a superposition of their usual classical states. The possibility of a quantum bit to be both on and off at the same time is mind-bending but is at the heart of quantum communication.
+
+Expanding the principle of superposition to multiple particles, we arrive at the concept of **entanglement**. Entanglement has no classical counterpart whatsoever. It correlates distant quantum objects across large distances of space much more strongly than is possible using classical laws of nature. The beauty of entanglement is that it allows for radically new ways to communicate and is used as a resource in quantum communication. Distribution of entanglement is therefore one of the main jobs of quantum networks.
+
+Quantum communication protocols are currently very difficult to implement. Quantum systems are very delicate as they **decohere** extremely rapidly, leading to loss of their quantum properties. They go from being true and false at the same time, to being only true or only false. Basically, they just become classical bits.
+
+Quantum systems are difficult to build at the hardware level, but at the same time, it is also conceptually challenging to think about new ways of exploiting their quantum properties. Designing new protocols for processing and communication in the quantum realm requires new tools. It requires a completely new mental framework for how we approach problems, and how we solve problems. This all seems very daunting but these challenges should be viewed as opportunities. Quantum computation and quantum communication are vibrant and cross-disciplinary fields. Engineers, physicists, mathematicians, and computer scientists are all working together on cracking difficult questions whose solutions will lead to incredible new quantum technologies.
+
+## Security in the Quantum Age
+
+Quantum technologies carry the potential to impact a number of important areas. Quantum simulation and computation are thought to bring about new methods in developing materials with novel and useful properties, as well as novel drugs. Quantum metrology allows for measurements with unprecedented resolution and sensitivity. Quantum machine learning aims to exploit the properties of quantum mechanics to enhance artificial intelligence. Lastly, you may have heard that quantum computers will be able to crack some widely used encryption schemes deployed currently, which may sound like a doomsday scenario. Since these lecture notes focus on quantum communication, we will briefly discuss what this claim means and show how quantum technologies can also enhance security.
+
+Computer security experts sometimes refer to the "CIA triad" of *confidentiality*, *integrity*, and *availability*. *Encryption* refers to a set of mathematical techniques for protecting digital information, making it difficult to read or to modify undetected, often used to achieve one of the CIA goals. In this book, we will loosely refer to "security" to mean this use of encryption.
+
+Let's consider a sender wishing to send a message to a receiver. The message might be something mundane such as "Buy some milk, please" or might be something sensitive such as "My credit card number is ...". Either way, messages sent over public channels are encrypted to preserve the privacy of the conversation between the sender and the receiver. Let's consider a third party, an eavesdropper, who is trying to listen in on the conversation by intercepting the message. The most commonly deployed current classical encryption techniques offer **computational security**, meaning that cracking them is not impossible, merely very difficult and would require enormous classical resources. Quantum algorithms exist that have the potential to break this encryption if they capture the message sequence starting from the initial exchange. An eavesdropper with access to a quantum computer could in principle intercept the encrypted message, use their quantum computer to break the code and listen in on the conversation with impunity.
+
+To overcome this problem, the communicating parties need to resort to using **quantum key distribution** (QKD). With the help of the superposition principle or entanglement, the sender and the receiver can discover the eavesdropper's attempts to intercept and tamper with their messages. They can then simply not transmit their sensitive message. This method of encryption offers **information-theoretic security**. Such security does not rely on the computational difficulty of certain mathematical problems and therefore is stronger than the computational security used currently (or at least offers a different attack surface). For this reason, QKD is one of the primary applications of quantum networks. We will explore the basics of QKD later in this book.
+
+## Module Overview
+
+Before concluding the first chapter, let's have a brief look at the structure of this module. The next three chapters deal with the basics of quantum mechanics relevant to quantum communication. We will learn about quantum bits and how they are different from classical bits, consider how noise affects the state of quantum states and how we can describe this effect mathematically. Finally, we will look at systems of multiple quantum bits, including entanglement and SPDC, a critical method of creating entanglement in optical systems.
+
+Chapters 5-7 deal with the basics of optics. Light is an excellent information carrier and we will learn how lasers produce light. We will discuss interference, one of the fundamental phenomena in both classical as well as quantum physics. We will conclude this block of chapters by learning about waveguides and how light is guided in a network.
+
+Chapters 8-10 look at fundamental quantum communication protocols. We will learn how teleportation can be used to transmit information without sending the physical system encoding this information as well as how quantum key distribution works.
+
+In chapters 11-13, we will look at the basics of quantum repeaters, a quantum technology that makes long-distance quantum communication possible. The last two chapters look at quantum repeater systems.
+
+There are some basic prerequisites for this module such as linear algebra (meaning vector and matrix multiplication; eigenvectors and eigenvalues; also, we will use the tensor product which will be introduced in this book), discrete probability, and complex numbers (e.g., $i = \sqrt{-1}$ and Euler's equation, $e^{i\pi} + 1 = 0$). The description of how lasers amplify light in a later chapter makes minimal use of derivatives from elementary calculus, but the core discussion is designed to be understandable without a background in calculus. It's very helpful if you have some introduction to quantum computing; programming and classical computing; and computer networks. Other than that there are no physics requirements.
+
+If you don't have some of this background yet, there are a lot of online materials, particularly our MOOC (massively open online course), "Understanding Quantum Computers", which is targeted at learners at the high school level and requires very minimal math. It is available in English, Japanese, Thai and Indonesian. If you would like to learn a little bit more about some basic linear algebra you can have a look at the playlist on Professor Van Meter's YouTube channel. There are many other courses available. Other modules from the Quantum Academy of Science and Technology (supported by the Q-Leap Education office in Japan) cover some of this background material as well, and may be available to you.
