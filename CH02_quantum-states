@@ -1,7 +1,3 @@
-إليك نص الشابتر كاملاً مُنسقاً بنفس التنسيق الأكاديمي والـ Markdown القياسي المُستخدم في الشابتر الأول (مع تصحيح أخطاء الـ LaTeX الخام مثل `\emph` و `ket{0}` وإكمال الأجزاء المفقودة بشكل سلس ونظيف):
-
----
-
 # Section 2: Quantum States
 
 In this chapter, we will learn about quantum states: how to write them down, what they represent, and how they differ from classical states.
