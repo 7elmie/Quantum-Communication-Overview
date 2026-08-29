@@ -127,7 +127,7 @@ How can we systematically find the adjoint $U^\dagger$ of an operator given its 
 1. **Complex Conjugate:** Replace every element with its complex conjugate (where $(x+iy)^* = x-iy$).
 2. **Transpose:** Swap the rows and columns (exchange off-diagonal elements).
 
-$$U = \begin{pmatrix} U_{00} & U_{01} \\ U_{10} & U_{11} \end{pmatrix} \longrightarrow \begin{pmatrix} U_{00}^{*} & U_{01}^{*} \\ U_{10}^{*} & U_{11}^{*} \end{pmatrix} \longrightarrow \begin{pmatrix} U_{00}^{*} & U_{10}^{*} \\ U_{01}^{*} & U_{11}^{*} \end{pmatrix} = U^{\dagger} $$
+$$U = \begin{pmatrix} U_{00} & U_{01} \\ U_{10} & U_{11} \end{pmatrix} \longrightarrow \begin{pmatrix} U_{00}^{*} & U_{01}^{*} \\ U_{10}^{*} & U_{11}^{*} \end{pmatrix} \longrightarrow \begin{pmatrix} U_{00}^{*} & U_{10}^{*} \\ U_{01}^{*} & U_{11}^{*} \end{pmatrix} = U^{\dagger}$$
 
 For example, for the Pauli $Y$ matrix:
 
@@ -154,6 +154,7 @@ For example, a rotation around the $Y$-axis by an angle $\pi/2$ applied to $\ket
 $$R_y(\pi / 2)\ket{0} = \ket{+}$$
 
 *(Note: Although this rotation takes $\ket{0}$ to $\ket{+}$, the Hadamard gate $H$ is not a $\pi/2$ rotation around the $Y$-axis; instead, $H$ corresponds to a $\pi$ rotation about the axis $(X+Z)/\sqrt{2}$.)*
+<img width="1139" height="470" alt="image" src="https://github.com/user-attachments/assets/758fde76-a149-4471-960a-292ebb17df56" />
 
 ---
 
