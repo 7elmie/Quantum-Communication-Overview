@@ -5,7 +5,7 @@ Then, we will learn how to operate on and extract information from quantum state
 Lastly, we will discuss multiple quantum states and how to describe them.
 Most of this chapter will be familiar to those who have taken an introductory quantum computing course.
 
-## Qubits
+# Qubits
 
 First, let's discuss quantum bits, also known as qubits.
 We have seen in the previous chapter that information can be represented by classical bits.
