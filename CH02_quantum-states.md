@@ -127,7 +127,7 @@ How can we systematically find the adjoint $U^\dagger$ of an operator given its 
 1. **Complex Conjugate:** Replace every element with its complex conjugate (where $(x+iy)^* = x-iy$).
 2. **Transpose:** Swap the rows and columns (exchange off-diagonal elements).
 
-$$U = \begin{pmatrix} U_{00} & U_{01} \\ U_{10} & U_{11} \end{pmatrix} \longrightarrow \begin{pmatrix} U_{00}^{*} & U_{01}^{*} \\ U_{10}^{*} & U_{11}^{*} \end{pmatrix} \longrightarrow \begin{pmatrix} U_{00}^{*} & U_{10}^{*} \\ U_{01}^{*} & U_{11}^{*} \end{pmatrix} = U^{\dagger}$$
+$$U = \begin{pmatrix} U_{00} & U_{01} \\ U_{10} & U_{11} \end{pmatrix} \longrightarrow \begin{pmatrix} U_{00}^* & U_{01}^* \\ U_{10}^* & U_{11}^* \end{pmatrix} \longrightarrow \begin{pmatrix} U_{00}^* & U_{10}^* \\ U_{01}^* & U_{11}^* \end{pmatrix} = U^\dagger$$
 
 For example, for the Pauli $Y$ matrix:
 
@@ -162,87 +162,66 @@ $$R_y(\pi / 2)\ket{0} = \ket{+}$$
 
 Now, let's consider measurements and how they extract information from qubits. A measurement asks the question: *is my qubit in the state $\ket{0}$ or is it in the state $\ket{1}$?*
 
-When measuring a general state $\ket{\psi} = \alpha\ket{0} + \beta\ket{1}$ in the computational basis ($Z$-basis), there are two possible outcomes, usually assigned values $+1$ and $-1$:
+When measuring a general state $|\psi\rangle = \alpha|0\rangle + \beta|1\rangle$ in the computational basis ($Z$-basis), there are two possible outcomes, usually assigned values $+1$ and $-1$:
 
-$$\operatorname{Prob}\{+1\} = \vert{}\alpha\vert{}^2 \longrightarrow \textrm{state collapses to } \vert{}0\rangle$$
+$$\text{Prob}\{+1\} = |\alpha|^2 \longrightarrow \text{state collapses to } |0\rangle$$
 
-$$\operatorname{Prob}\{-1\} = \vert{}\beta\vert{}^2 \longrightarrow \textrm{state collapses to } \vert{}1\rangle$$
+$$\text{Prob}\{-1\} = |\beta|^2 \longrightarrow \text{state collapses to } |1\rangle$$
 
-Immediately after measurement, the state **collapses** onto either $\ket{0}$ or $\ket{1}$.
+Immediately after measurement, the state **collapses** onto either $|0\rangle$ or $|1\rangle$.
 
 ### Measuring in Different Bases
 
-We can also measure in another basis, such as the Pauli $X$ basis, asking whether the state is in $\ket{+}$ or $\ket{-}$. We express $\ket{\psi}$ using the identities:
+We can also measure in another basis, such as the Pauli $X$ basis, asking whether the state is in $|+\rangle$ or $|-\rangle$. We express $|\psi\rangle$ using the identities:
 
-$$\vert{}0\rangle = \frac{1}{\sqrt{2}}(\vert{}+\rangle + \vert{}-\rangle), \qquad \vert{}1\rangle = \frac{1}{\sqrt{2}}(\vert{}+\rangle - \vert{}-\rangle)$$
+$$|0\rangle = \frac{1}{\sqrt{2}}(|+\rangle + |-\rangle), \qquad |1\rangle = \frac{1}{\sqrt{2}}(|+\rangle - |-\rangle)$$
 
-Substituting these into $\ket{\psi}$ gives:
+Substituting these into $|\psi\rangle$ gives:
 
-$$\vert{}\psi\rangle = \frac{\alpha+\beta}{\sqrt{2}}\vert{}+\rangle + \frac{\alpha-\beta}{\sqrt{2}}\vert{}-\rangle$$
+$$|\psi\rangle = \frac{\alpha+\beta}{\sqrt{2}}|+\rangle + \frac{\alpha-\beta}{\sqrt{2}}|-\rangle$$
 
 The probabilities for the outcomes in the $X$-basis are:
 
-$$\operatorname{Prob}\{+1\} = \frac{\vert{}\alpha+\beta\vert{}^2}{2} \longrightarrow \textrm{state becomes } \vert{}+\rangle$$
+$$\text{Prob}\{+1\} = \frac{|\alpha+\beta|^2}{2} \longrightarrow \text{state becomes } |+\rangle$$
 
-$$\operatorname{Prob}\{-1\} = \frac{\vert{}\alpha-\beta\vert{}^2}{2} \longrightarrow \textrm{state becomes } \vert{}-\rangle$$
-
-Similarly, in the Pauli $Y$ basis ($\ket{i}$ and $\ket{-i}$), where:
-
-$$\vert{}i\rangle = \frac{1}{\sqrt{2}}\begin{pmatrix}1 \\ i\end{pmatrix}, \qquad \vert{}-i\rangle = \frac{1}{\sqrt{2}}\begin{pmatrix}1 \\ -i\end{pmatrix}$$
-
-the state is rewritten as:
-
-$$\vert{}\psi\rangle = \frac{\alpha - i \beta}{\sqrt{2}}\vert{}i\rangle + \frac{\alpha + i \beta}{\sqrt{2}}\vert{}-i\rangle$$
+$$\text{Prob}\{-1\} = \frac{|\alpha-\beta|^2}{2} \longrightarrow \text{state becomes } |-\rangle$$
 
 ### Inner Product and Bras
 
-The **inner product** measures the overlap (similarity) between two quantum states. Given a state $\ket{\psi}$, its corresponding **bra** $\bra{\psi}$ is defined as its adjoint:
+The **inner product** measures the overlap (similarity) between two quantum states. Given a state $|\psi\rangle$, its corresponding **bra** $\langle\psi|$ is defined as its adjoint:
 
-$$\langle\psi\vert{} = (\vert{}\psi\rangle)^{\dagger} = \begin{pmatrix} \alpha \\ \beta \end{pmatrix}^{\dagger} = \begin{pmatrix} \alpha^{*} & \beta^{*} \end{pmatrix}$$
+$$\langle\psi| = (|\psi\rangle)^\dagger = \begin{pmatrix} \alpha \\ \beta \end{pmatrix}^\dagger = \begin{pmatrix} \alpha^* & \beta^* \end{pmatrix}$$
 
-The inner product between $\vert{}\phi\rangle = \gamma\vert{}0\rangle + \delta\vert{}1\rangle$ and $\vert{}\psi\rangle = \alpha\vert{}0\rangle + \beta\vert{}1\rangle$ is:
+The inner product between $|\phi\rangle = \gamma|0\rangle + \delta|1\rangle$ and $|\psi\rangle = \alpha|0\rangle + \beta|1\rangle$ is:
 
-$$\langle\phi \mid \psi\rangle = \begin{pmatrix} \gamma^{*} & \delta^{*} \end{pmatrix}\begin{pmatrix} \alpha \\ \beta \end{pmatrix} = \alpha \gamma^{*} + \beta \delta^{*}$$
+$$\langle\phi \mid \psi\rangle = \begin{pmatrix} \gamma^* & \delta^* \end{pmatrix}\begin{pmatrix} \alpha \\ \beta \end{pmatrix} = \alpha \gamma^* + \beta \delta^*$$
 
-Note that $\langle\psi\vert{}\phi\rangle = (\langle\phi\vert{}\psi\rangle)^*$. If $\langle\phi\vert{}\psi\rangle = 0$, the two states are **orthogonal**. For a normalized state, $\langle\psi\vert{}\psi\rangle = 1$.
+Note that $\langle\psi|\phi\rangle = (\langle\phi|\psi\rangle)^*$. If $\langle\phi|\psi\rangle = 0$, the two states are **orthogonal**. For a normalized state, $\langle\psi|\psi\rangle = 1$.
 
-Using inner products, the probability of obtaining an outcome corresponding to a basis state $\vert{}b_k\rangle$ when measuring $\vert{}\psi\rangle$ is given by:
+Using inner products, the probability of obtaining an outcome corresponding to a basis state $|b_k\rangle$ when measuring $|\psi\rangle$ is given by:
 
-$$\operatorname{Prob}\{k\} = \vert{}\langle b_k \mid \psi\rangle\vert{}^2$$
+$$\text{Prob}\{k\} = |\langle b_k \mid \psi\rangle|^2$$
 
 ---
 
 ## Probabilities, Expectation, and Variance
 
-A single measurement (**single-shot measurement**) yields only a single result ($+1$ or $-1$) and destroys the quantum superposition. To extract the underlying probabilities, we must measure many identical copies of state $\ket{\psi}$.
-
-If we perform $N$ total measurements resulting in $N(+1)$ positive outcomes and $N(-1)$ negative outcomes:
-
-$$\frac{N(+1)}{N(+1)+N(-1)} \approx \vert{}\alpha\vert{}^{2}, \qquad \frac{N(-1)}{N(+1)+N(-1)} \approx \vert{}\beta\vert{}^{2}$$
-
 ### Expectation Value
 
-The **expectation value** of measuring in the Pauli $Z$ basis is:
+The expectation value of measuring in the Pauli $Z$ basis is:
 
-$$\mathbb{E}[Z] = \operatorname{Prob}\{+1\} \cdot (+1) + \operatorname{Prob}\{-1\} \cdot (-1) = \vert{}\alpha\vert{}^{2} - \vert{}\beta\vert{}^{2}$$
-
-In Dirac notation, we write the expectation value of an operator $M$ as:
-
-$$\langle M \rangle = \langle\psi\vert{}M\vert{}\psi\rangle$$
-
-For Pauli $Z$:
-
-$$\langle Z \rangle = \begin{pmatrix} \alpha^* & \beta^* \end{pmatrix} \begin{pmatrix} 1 & 0 \\ 0 & -1 \end{pmatrix} \begin{pmatrix} \alpha \\ \beta \end{pmatrix} = \vert{}\alpha\vert{}^2 - \vert{}\beta\vert{}^2$$
+$$\mathbb{E}[Z] = \text{Prob}\{+1\} \cdot (+1) + \text{Prob}\{-1\} \cdot (-1) = |\alpha|^2 - |\beta|^2$$
 
 ### Variance and Fluctuations
 
 The variance of a measurement operator $Z$ is defined as:
 
-$$\operatorname{Var}[Z] = \mathbb{E}[Z^2] - \mathbb{E}[Z]^2 = \langle Z^2 \rangle - \langle Z \rangle^2$$
+$$\text{Var}[Z] = \mathbb{E}[Z^2] - \mathbb{E}[Z]^2 = \langle Z^2 \rangle - \langle Z \rangle^2$$
 
-Since $Z^2 = I$, we have $\langle Z^2 \rangle = \langle\psi\vert{}I\vert{}\psi\rangle = 1$. Therefore:
+Since $Z^2 = I$, we have $\langle Z^2 \rangle = \langle\psi|I|\psi\rangle = 1$. Therefore:
 
-$$(\Delta Z)^2 \equiv \operatorname{Var}[Z] = 1 - \langle Z \rangle^2$$
+$$(\Delta Z)^2 \equiv \text{Var}[Z] = 1 - \langle Z \rangle^2$$
+
 
 ---
 
