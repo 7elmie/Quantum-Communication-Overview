@@ -127,7 +127,7 @@ How can we systematically find the adjoint $U^\dagger$ of an operator given its 
 1. **Complex Conjugate:** Replace every element with its complex conjugate (where $(x+iy)^* = x-iy$).
 2. **Transpose:** Swap the rows and columns (exchange off-diagonal elements).
 
-$$U = \begin{pmatrix} U_{00} & U_{01} \\ U_{10} & U_{11} \end{pmatrix} \longrightarrow \begin{pmatrix} U_{00}^{*} & U_{01}^{*} \\ U_{10}^{*} & U_{11}^{*} \end{pmatrix} \longrightarrow \begin{pmatrix} U_{00}^{*} & U_{10}^{*} \\ U_{01}^{*} & U_{11}^{*} \end{pmatrix} = U^{\dagger}$$
+$$U = \begin{pmatrix} U_{00} & U_{01} \\ U_{10} & U_{11} \end{pmatrix} \longrightarrow \begin{pmatrix} U_{00}^{*} & U_{01}^{*} \\ U_{10}^{*} & U_{11}^{*} \end{pmatrix} \longrightarrow \begin{pmatrix} U_{00}^{*} & U_{10}^{*} \\ U_{01}^{*} & U_{11}^{*} \end{pmatrix} = U^{\dagger} $$
 
 For example, for the Pauli $Y$ matrix:
 
