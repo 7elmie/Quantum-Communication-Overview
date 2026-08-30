@@ -54,9 +54,9 @@ $$|1\rangle\langle1|\psi\rangle = |1\rangle\langle1| \left( \alpha|0\rangle + \b
 
 The outer products $|0\rangle\langle0|$ and $|1\rangle\langle1|$ capture the effect of **projective measurements**. The probabilities of the measurement outcomes can also be readily calculated as the expectation values of the projectors:
 
-$$\langle \psi | 0 \rangle \langle 0 | \psi \rangle = \left( \alpha^*\langle0| + \beta^*\langle1| \right) |0\rangle\langle0| \left( \alpha |0\rangle + \beta |1\rangle \right) = |\alpha|^2$$
+$$\langle \psi | 0 \rangle \langle 0 | \psi \rangle = \left( \alpha^* \langle 0 | + \beta^* \langle 1 | \right) |0\rangle\langle0| \left( \alpha |0\rangle + \beta |1\rangle \right) = |\alpha|^2$$
 
-$$\langle \psi | 1 \rangle \langle 1 | \psi \rangle = \left( \alpha^*\langle0| + \beta^*\langle1| \right) |1\rangle\langle1| \left( \alpha |0\rangle + \beta |1\rangle \right) = |\beta|^2$$
+$$\langle \psi | 1 \rangle \langle 1 | \psi \rangle = \left( \alpha^* \langle 0 | + \beta^* \langle 1 | \right) |1\rangle\langle1| \left( \alpha |0\rangle + \beta |1\rangle \right) = |\beta|^2$$
 
 Projectors corresponding to measurement in the Pauli $X$ basis ($|\pm\rangle$ outcomes) are:
 
