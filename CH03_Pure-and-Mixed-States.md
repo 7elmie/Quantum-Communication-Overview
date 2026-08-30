@@ -178,7 +178,7 @@ Projectors can be written as $\Pi^B_{\pm} = \frac{1}{2}(I \pm B)$.
    $$\Pi^B_+ = \frac{1}{2}\left[ I + \frac{Z+X}{\sqrt{2}} \right] = |\lambda_+\rangle\langle\lambda_+|, \quad |\lambda_+\rangle = \cos\frac{\pi}{8}|0\rangle + \sin\frac{\pi}{8}|1\rangle$$
    $$\Pi^B_- = \frac{1}{2}\left[ I - \frac{Z+X}{\sqrt{2}} \right] = |\lambda_-\rangle\langle\lambda_-|, \quad |\lambda_-\rangle = -\sin\frac{\pi}{8}|0\rangle + \cos\frac{\pi}{8}|1\rangle$$
 3. For $B = r_x X + r_y Y + r_z Z$:
-   $$\Pi^B_+ = \frac{1}{2} \begin{pmatrix} 1 + r_z & r_x - i r_y \\ r_x + i r_y & 1 - r_z \end{pmatrix}, \qquad \Pi^B_- = \frac{1}{2} \begin{pmatrix} 1 - r_z & -(r_x - i r_y) \\ -(r_x + i r_y) & 1 + r_z \end{pmatrix}$$
+$$\Pi^B_+ = \frac{1}{2} \begin{pmatrix} 1 + r_z & r_x - i r_y \\ r_x + i r_y & 1 - r_z \end{pmatrix}, \qquad \Pi^B_- = \frac{1}{2} \begin{pmatrix} 1 - r_z & -(r_x - i r_y) \\ -(r_x + i r_y) & 1 + r_z \end{pmatrix}$$
 
 ---
 
@@ -186,7 +186,7 @@ Projectors can be written as $\Pi^B_{\pm} = \frac{1}{2}(I \pm B)$.
 A machine prepares $|0\rangle$ with 60% probability, $|1\rangle$ with 20%, and $|+\rangle$ with 20%.
 1. **Dirac notation:** $\rho = \frac{3}{5}|0\rangle\langle0| + \frac{1}{5}|1\rangle\langle1| + \frac{1}{5}|+\rangle\langle+|$
 2. **Matrix form:**
-   $$\rho = \begin{pmatrix} \frac{7}{10} & \frac{1}{10} \\ \frac{1}{10} & \frac{3}{10} \end{pmatrix}$$
+$$\rho = \begin{pmatrix} \frac{7}{10} & \frac{1}{10} \\ \frac{1}{10} & \frac{3}{10} \end{pmatrix}$$
 
 ---
 
