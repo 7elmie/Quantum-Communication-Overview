@@ -203,4 +203,3 @@ For $\rho = (1-p)|\psi\rangle\langle\psi| + p X|\psi\rangle\langle\psi|X$:
 For a phase-flip channel $\rho = (1-p)|\psi\rangle\langle\psi| + p Z|\psi\rangle\langle\psi|Z$:
 1. States unaffected are eigenstates of $Z$, namely $|0\rangle$ and $|1\rangle$.
 2. **Purity:** $\text{Tr}\{\rho^2\} = (1-p)^2 + p^2 + 2p(1-p)\langle Z \rangle^2$.
-```
