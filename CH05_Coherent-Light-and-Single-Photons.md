@@ -1,0 +1,493 @@
+# Section 5: Coherent Light and Single Photons
+
+In this chapter, we will look at why light is such an integral part of modern day communication.
+We will discuss the difference between coherent and incoherent light, and outline the basic principle behind producing coherent light using lasers.
+Finally, we will transition to talking about light in the context of quantum communication that relies on single photons as information carriers.
+
+---
+
+## Introduction
+
+Why do we want to encode information as optical signals?
+The first reason behind light being a good carrier of information is its incredible ***speed***.
+Table 5.1 summarizes the speed of light in various media.
+
+| vacuum | air | silica fiber |
+| :---: | :---: | :---: |
+| $c$ | $c/1.0003$ | $c/1.47$ |
+| $2.998\times10^{8} \; \text{ms}^{-1}$ | $2.998\times10^{8} \; \text{ms}^{-1}$ | $2.039\times10^{8} \; \text{ms}^{-1}$ |
+
+In vacuum, the speed of light is $c=2.998\times 10^8$ $\text{ms}^{-1}$.
+Here on Earth, most of the time we do not send light through vacuum.
+Even in air the light slows by only a small factor of 1.0003.
+Most often, we use fiber optic cables made from pure silica glass with refractive index of 1.47.
+This decreases the speed of light somewhat but it still remains very fast.
+
+Apart from being fast, light is also relatively ***easy to produce***.
+Even in the early days of civilization, a reliable source of light was fire.
+We saw an example of this when we learned about optical telegraphy used for rapid communication on the Great Wall of China in Chapter 1.
+Today, for long-distance communication, we mainly use lasers and send the optical signals through fibers.
+Due to their ability to produce highly coherent light, lasers have had a transformative impact, not only on the way we communicate, but on many other aspects of our lives. 
+
+The third reason why light is so useful in communication is that photons do not interact easily with each other.
+Once in flight, photons will continue speeding to their destination nearly unaffected.
+This makes optical signals ***robust to noise***.
+Compare this with copper wires carrying electric signals.
+The moving electrons are susceptible to external electric and magnetic noise and require thorough shielding to protect the integrity of the signal.
+Furthermore, the moving electrons themselves produce electromagnetic fields which may affect other nearby carriers of electric signals.
+This means that copper wires cannot be packed too closely to each other.
+In contrast, this is not the case for optical fibers.
+
+<!-- 
+![Map of submarine cables.](Figures/Chapter05/Color/5-1_underwater_cable_map.png)
+-->
+
+Optics has always played an important role in communication.
+We saw a couple of examples of that already in the Great Wall of China and Napoleon's semaphore in chapter 1.
+These methods were limited in the sense that you had to have a direct visual path between the sender and the receiver, you needed good weather conditions, and in the case of Napoleon's semaphore, it only worked during the day.
+<!-- 
+***Waveguides*** circumvent all these problems.
+Use of electric wires and optical fibers sparked a rapid expansion in our ability to communicate fast and far.
+Figure 5-1 shows a map of submarine cables (This map was obtained from TeleGeography at https://www.submarinecablemap.com/ under the CC BY-SA 4.0 license.), connecting the continents.
+It is these cables that allow seamless global communication at incredible speeds.
+-->
+
+In this chapter, we are going to be concerned with how to produce three types of light.
+We will begin with ***incoherent light***, which can be produced by burning fuel or heating a gas.
+We will explain in what sense this light is incoherent in Section 5.2.
+This type of light is known as a classical state of light as it does not manifest any quantum behavior.
+
+We will compare incoherent light with ***coherent light*** produced by lasers. The main mechanism behind producing this light is known as stimulated emission, which we will discuss in Sec. 5.3 and Sec. 5.4.
+Lasers sparked the first information revolution and therefore played an important historical role.
+Despite its coherent nature, light produced by lasers is still not fully quantum. 
+Developments in laser technology over the last decades have led to great proliferation of available sources of coherent light.
+Lasers range from large and powerful ones found in high-tech laboratories to small pointer devices hanging from our keychains.
+
+We will conclude this chapter by looking at ***single photon sources*** in Sec 5.5.
+We will discuss three ways to produce single photons.
+The first one is by attenuation of laser light.
+The second method is by using heralded photons.
+The third way is to use genuine emitters of single photons, such as nitrogen vacancy centres in diamond.
+Compared to the previous two types of light, single photons are very difficult to make.
+They can only be produced in laboratories or devices that meet very stringent requirements, but they can display quantum behavior, which is why they are crucial in quantum communication.
+
+---
+
+## Coherent vs Incoherent Light
+
+We begin by understanding how matter can radiate light.
+Let's consider a model of a simple two-level atom.
+The atom has two distinguishable states given by the ground state with energy $E_g$, and the excited state with energy $E_e$.
+The state of the atom is pictured by the blue circle.
+Atoms are most stable when they are in the lowest energy state, in this case the ground state.
+Atoms in the ground state do not radiate any light.
+In order to produce light, the atom needs to first receive enough energy.
+One way to do that is through heat.
+If this is the case, we say the atom becomes ***thermally excited***.
+This means that the thermal energy received by atom forced it to transition to the excited state.
+Different way of exciting the atom is to irradiate it with light of the right energy.
+The atom can absorb radiation of energy equal to the difference of energies between the excited and ground states, $E_p = E_e - E_g$.
+When this happens, we say the atom has been ***radiatively excited***.
+After some time, the atom in the excited state releases the stored energy in the form of a photon of light.
+This process happens without an external stimulus at a random time and is called ***spontaneous emission***.
+
+Let's consider two such excited atoms.
+The atoms eventually undergo the process of spontaneous emission producing one photon each.
+The direction of emission is random and generally different for both atoms.
+There is a possibility that they will emit in the same direction but the chance of this happening is very small.
+Furthermore, both photons have random and different phases.
+We say that the emitted photons are incoherent.
+
+We can go a step further and consider a large number of atoms emitting photons.
+To have a more specific image in mind, we can consider an incandescent light bulb.
+The filament is heated up by an electric current running through it.
+This in turn excites the atoms in the filament, which eventually undergo spontaneous emission producing a large amount of photons.
+Not only are these photons travelling in all possible directions and are out of phase, their energies are different as well.
+This is because the atoms in the filament have a much more complicated energy level structure than our simple two-level model.
+In conclusion, incoherent light is composed of components with different energies travelling in different directions, each having a different phase.
+
+Producing incoherent light is very easy.
+The question that you might be asking yourself is, what does it take to produce coherent light?
+How can we make light that has a single component of the same energy, travelling in the same direction and with the same phase?
+We will answer this question in the next two sections.
+
+---
+
+## Lasers I: Stimulated Emission
+
+In this section, we begin to answer the question that was raised at the end of the previous section.
+What are the basic ingredients to make coherent light?
+Such light is in-phase, monochromatic (meaning each photon has the same frequency), and travels in the same direction.
+Typical example of a source that produces light with these properties is the ***laser***.
+Laser stands for "light amplification via stimulated emission of radiation".
+Let's have a look at what these individual terms mean.
+
+Let's begin with ***stimulated emission***, which is the physical process behind lasing.
+We have encountered two of the three fundamental ways in which light interacts with matter, namely stimulated absorption and spontaneous emission.
+Stimulated absorption is when an atom, initially in the ground state, interacts with an incoming photon. If the frequency of the photon is just right, the atom may absorb this photon, and the atom becomes excited.
+Spontaneous emission is when an initially excited atom emits a photon of light without any external stimulus.
+Important property of spontaneous emission, which we mentioned in the previous section, is that this photon is emitted in a random direction.
+Stimulated emission on the other hand is when an initially excited atom interacts with an incoming photon.
+This causes the atom to emit a photon of light.
+But this time, the emitted photon of light has the same energy as the external photon, same phase and, it is emitted in the same direction.
+In other words, the two photons are coherent.
+
+We can see that stimulated emission starts with a single photon and finishes with two coherent photons.
+This opens up the possibility of amplifying light, which brings us to the ***light amplification*** part of the laser.
+Imagine having a large number of atoms in the excited state.
+A single photon of light can stimulate the first atom to emit a photon.
+Both photons (the initial one and the newly emitted one) can now stimulate further atoms to emit, triggering a cascade of emissions and producing a coherent beam of highly intense light. 
+There is however one catch to the above scheme, not all of the atoms are usually found in the excited state.
+When left alone, the atoms are much more likely to be in the ground state.
+Getting all of them into an excited state is no easy task.
+
+Let's first consider a single atom interacting with a single photon and do some simple accounting to better understand light amplification.
+This time, we do not assume that the atom is in the excited state.
+There are three possibilities that are summarized in Table 5.2.
+
+| | **Photons IN** | **Interaction** | **State of the atom** | **Photons OUT** |
+| :--- | :---: | :---: | :---: | :---: |
+| **Case 1** | 1 | No | ground/excited | 1 |
+| **Case 2** | 1 | Yes | ground | 0 |
+| **Case 3** | 1 | Yes | excited | 2 |
+
+The first case is the trivial one, the photon does not interact with the atom.
+The atom's state has no effect on the final photon count.
+This is represented by the first row of Table 5.2.
+The second possibility is that the photon interacts with the atom while it is in the ground state.
+The atom absorbs the energy of the photon meaning the number of photons after the process drops to zero, as seen in the second row of Table 5.2.
+The last possibility is that the photon interacts with an atom in the excited state, the atom is stimulated to emit a photon, resulting in two coherent photons after the interaction as seen in the last row of Table 5.2.
+Assuming that each of the three cases occurs with the same probability, the average number of photons before and after the interaction remains unchanged.
+This means a single atom is not able to amplify light purely via stimulated emission.
+
+Let's now consider multiple atoms to see how the situation changes.
+Consider four two-level atoms.
+For simplicity, we assume that the incoming photon has equal probability to interact with any of the four atoms.
+The probability of spontaneous absorption taking place is proportional to the number of atoms in the ground state, $N_g$.
+Not surprisingly, the probability of stimulated emission is proportional to the number of atoms in the excited state, $N_e$.
+All atoms are initially in the ground state, $N_g=4$.
+The only interaction that is possible for an incoming photon is to get absorbed by one of the atoms.
+Let's assume that atom 2 is the one that absorbs the photon and transitions to an excited state.
+At time $t_1$, there is a new incoming photon.
+This time $N_e=1$ and $N_g=3$, meaning both stimulated absorption and emission are possible.
+However, stimulated absorption is more likely because more atoms are in the ground state.
+Let's say that the photon is absorbed by atom 1.
+At time $t_2$, there is a new incoming photon, and both stimulated absorption and emission are equally likely since $N_e=N_g=2$.
+For the sake of this example, let's say that this photon is absorbed by atom 4, bring the totally tally to $N_e=3$ and $N_g=1$.
+Finally, when another photon at time $t_3$ comes along, it has a higher chance of stimulating an emission from one of the excited atoms.
+This example demonstrates that if we want to achieve light amplification, we require
+
+$$N_e > N_g.$$
+
+This condition is known as ***population inversion***.
+
+It seems that we now have a way of producing an intense and highly coherent light.
+There is however one final obstacle that needs to be overcome.
+We have seen that if $N_g > N_e$, the incoming photon is more likely to be absorbed and contribute to the population of the excited state.
+On the other hand, when $N_g < N_e$, then the incoming photon is more likely to stimulate an emission from one of the excited atoms, contributing to the population of the atoms in the ground state.
+This means that in the long-time limit, the population of atoms approaches an equal distribution where $N_g = N_e$, where the population is not inverted.
+This demonstrates that population inversion is not possible for an ensemble of two-level atoms.
+
+---
+
+## Lasers II: Population Inversion
+
+We finished the previous section by concluding that we cannot achieve population inversion with a ensemble of two-level atoms.
+Three-level atoms on the other hand are suitable for this task as we will learn in this section.
+Consider a three-level atom which demonstrates the basic working principle of a laser.
+The ground state is labelled with $E_1$, the middle excited state with $E_2$, and the top excited level with $E_3$.
+We assume that the new level $E_3$ is ***unstable***, meaning that whenever the atom is excited to level $E_3$, it very quickly decays via spontaneous emission to the middle level $E_2$.
+We also assume that level $E_2$ is ***metastable***, meaning the atom does not quickly decay to the ground state.
+
+Before addressing the issue of population inversion with an ensemble of three-level atom, let's have a look at the lasing cycle.
+It consists of the following three stages:
+
+***1. Pumping:***
+We assume that the atom is initially in the ground state $E_1$.
+The atom is then pumped to the excited level $E_3$ by a strong pump laser.
+Provided that the energy levels $E_2$ and $E_3$ are well separated, the pump laser has negligible probability of exciting the atom to level $E_2$.
+
+***2. Fast decay:***
+Due to the instability of level $E_3$, the atom quickly decays to the metastable level $E_2$.
+We have learned that photons produced via spontaneous emission travel in a random direction.
+These photons do not contribute to the amplification of light.
+
+***3. Stimulated emission:***
+Finally, a photon of energy $E_2-E_1$, interacts with the atom causing it to decay to the ground state via stimulated emission.
+The transition $E_2\rightarrow E_1$ is known as the ***lasing transition***.
+Photons produced via this transition do contribute to light amplification.
+
+The lasing cycle demonstrates why we need the pump.
+Its role is to make sure there are enough atoms populating the metastable level $E_2$.
+Now we see how population inversion can be achieved using three-level atoms.
+By using an intense pump, we decrease the population of the ground state $N_1$.
+The instability of level $E_3$ and metastability of $E_2$ ensure that
+
+$$N_2 > N_1,$$
+
+leading to population inversion required for lasing.
+
+Having described the basic working principle of a laser, let's see what are the main its components.
+The ***gain medium*** is an ensemble of our three-level atoms.
+Left to their devices, the atoms will mostly be found in the ground state.
+Turning on the pump will begin the lasing cycle.
+Initially, the excited atoms will decay via transitions $E_3 \rightarrow E_2 \rightarrow E_1$ through spontaneous emission and the produced photons will mostly be incoherent.
+Some of the photons emitted from the transition $E_2 \rightarrow E_1$ will be reflected by the mirrors and remain in the ***optical cavity***.
+These photons will move through the gain medium again where they will encounter a significant population in the middle level $E_2$.
+Now the atoms will decay through stimulated emission, producing coherent photons with the ones that were reflected by the mirrors.
+Each time the photons get reflected from the mirrors, they stimulate further emission from the lasing transition leading to very intense coherent light inside the optical cavity.
+In order to extract this light, one of the mirrors is only partially reflective and a portion of the coherent light is transmitted resulting in an intense and coherent beam of light outside the optical cavity.
+Eventually, the number of photons inside the optical cavity reaches a steady state where the rate of production of new photons via stimulated emission balances the rate of loss of photons due to the partially reflective mirror.
+
+Having learned about the fundamental working principles and basic construction of the laser, it is time to make our discussion a bit more quantitative.
+In particular, we would like to have a better understanding of the following behavior.
+If the pump is weak, no lasing is observed.
+Once the rate at which the gain medium is pumped reaches a certain ***threshold***, lasing takes place.
+In the remainder of this section, we discuss a simplified nonlinear dynamical model that captures this behavior.
+
+The two variables of interest are the number of photons inside the optical cavity, denoted by $n$, and the number of atoms in the state $E_2$, denoted by $N_2$.
+During the lasing process, the number of photons rapidly increases resulting in a large positive rate of change of the number of photons.
+This rate of change is given by the time derivative of the number of photons, written $dn/dt$.
+Time derivatives are often written with a dot above the changing variable, $\dot{n} \equiv dn/dt$, notation which we will use in the rest of this section as well.
+This rate of change is given by the following difference,
+
+$$\dot{n} = \text{gain} - \text{loss}.$$
+
+The gain represents processes that contribute to the number of photons $n$.
+In our case, this captures the effect of stimulated emission.
+The amount of gain depends on both the number of photons $n$ as well as the population of excited atoms $N_2$.
+In the absence of either, the gain vanishes, therefore we can write
+
+$$\text{gain} = G n  N_2.$$
+
+We have introduced the gain coefficient $G>0$.
+The loss represents photons escaping the optical cavity.
+More photons inside the optical cavity lead to larger loss term,
+
+$$\text{loss} = k n,$$
+
+where $k>0$ is the loss coefficient.
+Substituting the gain and loss equations into the rate equation, we obtain
+
+$$\dot{n} = G n N_2 - k n.$$
+
+Next, we make the crucial observation that stimulated emission decreases the population $N_2$.
+The more photons present in the optical cavity the more likely that stimulated emission takes place.
+Equally important, we must realize that in the absence of lasing, the pump maintains a constant population $N_2 = N_0$.
+This allows us to write the population of excited atoms as
+
+$$N_2 = N_0 - \alpha n,$$
+
+where $\alpha$ is the rate of stimulated emission.
+Substituting this into our equation leads to our final expression for the rate of change of photons inside the optical cavity,
+
+$$\dot{n} = (G N_0 - k) n - \alpha G n^2.$$
+
+The equation above is not easily solved analytically.
+Frankly, such a solution would not be very enlightening anyway.
+To gain better understanding of the dynamics between the number of photons in the optical cavity $n$ and the number of excited atoms $N_2$, we proceed by using graphical methods of analysis.
+We would like to determine how the rate of change of the photon number $\dot{n}$ changes as a function of $n$ in different parameter regimes.
+The main object of interest are the ***fixed points*** of the dynamical system.
+Fixed points, denoted by $n^*$, are states of the dynamical system that do not change in time,
+
+$$\left.\dot{n}\right|_{n^*} = 0.$$
+
+In some cases, fixed points can be good approximations to the long-term solution of the dynamical system, that is $n^* = \lim_{t\rightarrow\infty} n$.
+Such fixed points are known as ***stable*** fixed points.
+In other cases, the fixed point may satisfy the property of vanishing rate of change, but any small deviation from the fixed point pushes the state of the system further away from it.
+Such fixed points are known as ***unstable*** fixed points (There are fixed points that are both stable and unstable. However, we will not encounter such exotic cases in this book.).
+We can get good intuition for these two types of fixed points by considering a ball rolling down a hill.
+If the ball starts exactly at the top of the hill it will not move.
+However, any small deviation from the hill's top will result in the ball starting to roll down a hill.
+The top of the hill represents an unstable fixed point.
+The ball will continue rolling down until it finds a valley, where it will stop and settle down.
+Even if we give the ball a little push, the ball will simply roll back into the valley.
+The valley represents a stable fixed point.
+We will see that depending on the parameters of our simplified lasing model, the final rate equation can have one or two fixed points.
+
+*Case 1: Weak pumping.*
+We observe from the rate equation that when the pump is such that $N_0 < k / G$, the right-hand-side of the equation is negative, $\dot{n} < 0$, for any $n$ because the number of photons can only be non-negative.
+This means that regardless of how many photons we start with, eventually they will all leak from the cavity and $n$ will always tend to zero.
+The rate of change of the photon number is indeed negative as predicted.
+It always decreases and asymptotically approaches the stable fixed point $n^* = 0$.
+There is no lasing in this weak-gain regime.
+
+*Case 2: Strong pumping.*
+Now let's look at the strong-gain regime when $N_0 > k / G$.
+In this case, the right-hand-side of the equation may be positive as well as negative.
+This means that for some starting values of $n(t)$ the photon number will decrease, and for others it will increase.
+This time, $\dot{n} = 0$ has two solutions, suggesting there are two fixed points.
+One of them is our old fixed point $n^*=0$.
+Unlike before, this fixed point is now unstable, meaning that any small deviation from it will result in an increase of $n$, which will flow towards a new stable fixed point at a finite value.
+We can observe amplification of the photon number which is a clear sign of lasing.
+
+To summarize our analysis of the rate equation:
+When $N_0 < k / G$, there is only a single fixed point at $n^* = 0$.
+In this regime the atoms are weakly pumped and decay via spontaneous emission producing incoherent light, just like a light bulb.
+When $N_0 > k / G$, two fixed points exist.
+It is in this regime where lasing takes place.
+
+---
+
+## Single Photons
+
+Lasers are excellent sources of intense coherent light and are indispensable in modern fiber-optic communication.
+Pulses of laser light can be used to encode classical bits.
+Presence of a pulse can encode a bit value of 1 and absence of a pulse can encode a bit value of 0.
+Such encoding has a number of desired properties making it suitable for classical communication.
+It is robust against ***attenuation***.
+Due to the large number of photons constituting a single pulse, loss of a few of them along the fiber presents no issue, and the message remains legible to a decoder at the destination.
+Even if the pulse travels a large distance along the fiber and attenuation becomes a problem, the message can be read and ***amplified*** along the way.
+Finally, producing these pulses of light is relatively easy and therefore ***reliable***.
+
+On the other hand, intense pulses of laser light cannot be easily put in a quantum superposition and they cannot be entangled with other systems.
+This makes the above encoding scheme entirely unsuitable for quantum communication.
+In order to exploit the full toolbox of quantum mechanics, we have to use single photons.
+In this section, we outline the three basic methods of producing single photons.
+
+The first method relies on gradual ***attenuation of laser light***.
+The intense laser pulse exiting the optical cavity is passed through a series of attenuator plates.
+Each plate transmits only a portion of the laser light and therefore decreases the pulses intensity.
+This process is repeated until the average energy of the pulse, $\lambda$, is less than that of a single photon.
+
+This approach to producing single photons is conceptually simple but suffers from a number of serious issues.
+Firstly, this source of single photons is probabilistic.
+The number of photons contained in the pulse after the attenuation process follows a Poissonian distribution.
+If the average number of photons per pulse is $\lambda = 0.1$, then the probability of there being zero photons is 90.5%, probability of a single photon is 9.1%, and probability of two photons is 0.4%.
+Most of the time, the pulse becomes completely attenuated and the process of generation of single photons fails.
+There is also a finite probability that this method generates more than one photon, which is highly undesirable in quantum communication.
+
+The second issue is quite technical but very important, and has to do with something called the ***second-order correlation function*** $g^{(2)}(\tau)$.
+The full derivation of this function is well beyond the scope of this book but its meaning is not so complicated.
+The second-order correlation function $g^{(2)}(\tau)$ tells us how likely it is to detect two photons, one at time $t$, and the other one at time $t+\tau$.
+Particular case of interest in our discussion is when the time interval between the detection events vanishes, $\tau = 0$.
+For ideal single photons, the second-order correlation function $g^{(2)}(0) = 0$.
+This is quite intuitive.
+If there is only a single photon, then it should be impossible to detect a second photon when we detect the first one.
+We say that a single-photon source produces light which is ***anti-bunched***.
+For realistic sources, as long as $g^{(2)}(0) < 1$, we say the light is anti-bunched and possesses quantum properties.
+On the other hand, for classical light $g^{(2)}(0) \geq 1$, and when it is strictly larger than unity, we say the light is ***bunched***.
+Laser light is neither bunched nor anti-bunched as $g^{(2)}(0)=1$.
+Since the single photons produced by attenuation started as a laser they are not anti-bunched.
+This is a problem because numerous protocols in quantum computation require anti-bunched light.
+
+The second method of producing single photons is via ***heralded spontaneous parametric down-conversion***.
+We have discussed the basics of SPDC in Section 4.4, where we used it to produce entangled pairs of photons.
+Conversion of a single high energy photon into two photons of lower energy can be also used as a source of single photons by using the fact that the two produced photons have a well-defined direction of travel.
+We can detect one of these photons in order to herald presence of a single photon in the other mode.
+This scheme is still probabilistic as the SPDC is a very rare process, meaning we have to try many times before we produce a heralded single photon.
+In some cases this rarity can be an advantage because once we detect the signal photon we have a very high probability that the idler mode contains only a single photon.
+The properties of the detector also affect this scheme.
+Real detectors are not 100% efficient, meaning sometimes a signal photon goes undetected.
+This might be annoying but really it just means that we have to try the whole process again.
+More importantly, real detectors have a finite ***dark count rate***, meaning occasionally they register a detection event even in the absence of a signal photon.
+This "heralds" a non-existent idler photon and has a deleterious effect on any quantum communication protocol relying on single photons produced by this scheme.
+
+The last approach to producing single photons is through ***fluorescence*** of atoms and molecules.
+The idea is basically the same as the one we have been discussing throughout this Chapter.
+A physical system with discrete levels is first excited to a higher energy level and later transitions back to a lower energy level by emitting a single photon.
+One promising source of single photons that is currently under intense research focus is ***nitrogen-vacancy centers in diamond***.
+The NV center consists of a nitrogen atom $N$ located next to a vacant site $V$ of a diamond lattice.
+This vacancy is used to trap an electron whose ***spin*** then acts as a qubit (You should have already studied the basics of atomic structure, but for the record, electrons generally have two states that can be described as "spin up" and "spin down", which we write as $\ket{\uparrow}$ and $\ket{\downarrow}$.).
+The electron qubit can be manipulated optically, can retain its quantum properties even at room temperatures, and acts as an excellent source of single photons with nearly vanishing second-order correlation function $g^{(2)}(0)$.
+All these properties make NV centers in diamond very promising physical systems for quantum communication.
+
+---
+
+## Exercises
+
+### Exercise 1: Laser model
+We introduced our mathematical toy model of a laser. The rate of change of the number of photons inside the optical cavity, $n$, is given by
+
+$$\dot{n} = (G N_0 - k) n - \alpha G n^2,$$
+
+where $G$ is the gain coefficient, $N_0$ is the number of excited atoms maintained by the pump in the absence of lasing, $k$ is the photon loss coefficient, and $\alpha$ is the rate of stimulated emission.
+We gained intuition into the dynamics of this model via graphic tools.
+Let's analyze this model mathematically.
+
+(a) By solving $\dot{n} = 0$, show that the there are two fixed points,
+
+$$n_1^* = 0, \qquad \text{and }\qquad n_2^*=\frac{GN_0 - k}{\alpha G}.$$
+
+Determine under what conditions are both of these fixed points physical.
+
+(b) Stability of the fixed points can be determined by *linearizing* around the fixed points (This is the same idea used in calculus to determine whether a stationary point of a function is a maximum or a minimum.).
+The trick is to look at the value of the derivative of the rate of change with respect to the photon number at the fixed point.
+If it is positive, the fixed point is unstable.
+If it is negative, the fixed point is stable,
+
+$$\left.\frac{d\dot{n}}{dn}\right|_{n=n^*}\longrightarrow\begin{cases}
+<0, \quad\text{when } n^*\text{ is stable}, \\
+>0, \quad\text{when } n^*\text{ is unstable}.
+\end{cases}$$
+
+Determine the stability of all fixed points.
+(*Hint*: For one of the fixed points you will find that $d\dot{n}/dn|_{n=n^*}=0$. This means that linearization around the fixed point is not enough to determine the stability of the fixed point. Use graphical methods instead.)
+
+#### Solution (a)
+In order to solve an equation of the form $ax^2+bx+c=0$, we apply the quadratic formula,
+
+$$
+\begin{aligned}
+n^* & = \frac{-b\pm\sqrt{b^2-4ac}}{2a} \\
+& = \frac{-(GN_0-k) \pm (GN_0-k)}{-2\alpha G} \\
+& = \frac{GN_0-k}{2\alpha G} \mp \frac{GN_0-k}{2\alpha G}.
+\end{aligned}
+$$
+
+This leads to the following two fixed points,
+
+$$n^*_1 = 0, \qquad n^*_2=\frac{GN_0-k}{\alpha G}.$$
+
+The first fixed point describes the regime of an empty cavity with no photons, where the pump is not strong enough, there is no stimulated emission, and the laser acts as a lamp. The second fixed point exists only when $n_2^*\geq0$, since negative number of cavity photons does not make physical sense. This happens when $GN_0>k$, meaning the pump strength is over the lasing threshold.
+
+#### Solution (b)
+Computing the derivative of $\dot{n}$ with respect to $n$, we obtain
+
+$$\frac{d\dot{n}}{dn}=GN_0-k-2\alpha Gn.$$
+
+Derivatives of $\dot{n}$ with respect $n$ at the fixed points are
+
+$$\left.\frac{d\dot{n}}{dn}\right|_{n^*_1}=GN_0-k, \quad \left.\frac{d\dot{n}}{dn}\right|_{n^*_2}=-(GN_0-k).$$
+
+Looking at the first fixed point, we observe that in the weak-pump regime, $GN_0<k$, the derivative is negative and therefore the fixed point is stable. In the strong-pump regime, $GN_0>k$, the stability flips and the fixed point becomes unstable.
+The second fixed point only exists in the strong-pump regime, $GN_0>k$. We see that this fixed point is stable.
+
+---
+
+### Exercise 2: Single photons via attenuation
+How many photons per second are in one milliwatt of laser power at a wavelength of 1550nm? In order to solve this problem, you will need to know that the energy in a single photon is
+
+$$E = \frac{hc}{\lambda},$$
+
+where $\lambda$ is the wavelength of the light and $h=6.626\times 10^{-34} \text{ Js}$ is Planck's constant.
+(You may need to look up the relationship between energy in joules and power in watts.)
+
+(a) Assume an attenuator plate blocks 99% of the incoming photons.
+Find the average number of photons per second after the light passes through (i) 1 attenuator plate, (ii) 2 attenuator plates, (iii) $m$ attenuator plates.
+
+(b) How many attenuator plates are needed in order for the average number of photons per second to drop below 1?
+
+#### Solution
+Power $P$ in watts measures how much energy in joules is delivered per time in seconds. Therefore, the laser delivers $10^{-3}$ joules of energy every second. Knowing the energy of every photon $E_{\text{photon}}$, we can compute the number of photons per second,
+
+$$\#\text{ of photons per second} = \frac{P}{E_{\text{photon}}} = \frac{P\lambda}{hc} = 7.8\times10^{15}.$$
+
+(a)
+(i) 1 attenuator plate: $7.8\times10^{15} \times 0.01=7.8\times10^{13}$.
+(ii) 2 attenuator plates: $7.8\times10^{15} \times 0.01^2=7.8\times10^{11}$.
+(iii) $m$ attenuator plates: $7.8\times10^{15} \times 0.01^m$.
+
+(b) We are looking for an integer $m$ such that
+
+$$
+\begin{aligned}
+7.8\times10^{15} \times 0.01^m & \leq 1 \\
+0.01^m & \leq \frac{1}{7.8\times10^{15}} \\
+\ln (0.01)^m & \leq \ln (7.8\times10^{-16}) \\
+m\ln (0.01) & \leq \ln (7.8\times10^{-16}) \\
+m & \geq \frac{\ln (7.8\times10^{-16})}{\ln (0.01)} = 7.94.
+\end{aligned}
+$$
+
+Therefore, we require at least $m=8$ attenuators in order for the average number of photons per second to drop below 1.
