@@ -53,7 +53,7 @@ We observe that the wave is propagating faster as it covers longer distance in t
 The wave number $k$ controls the "shape" of the wave, stretching or contracting the oscillations by determining their wavelength.
 On the other hand, the angular frequency $\omega$ controls how much the whole wave shifts in time.
 
-![Propagation of waves in time.](Figures/Chapter06/BW/6-1_frequency_BW.pdf)
+<img width="1536" height="1024" alt="Propagation of waves in time" src="https://github.com/user-attachments/assets/160050c4-dd08-46a9-a5e4-02363fa676b4" />
 
 Having gained some intuition how the various parameters affect the behavior of the wave, it is time to discuss what happens when two waves meet.
 Let's consider a special case of two waves, $\Psi_1(x,t)$ and $\Psi_2(x,t)$, each with a different amplitude and initial phase, but both having the same frequency:
