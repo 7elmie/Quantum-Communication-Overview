@@ -228,5 +228,28 @@ If we block the lower path with an absorbing material, interference is prevented
 
 ---
 
+## Exercises
+
+### Exercise 1: Visualization of wave propagation
+Significant portions of this Chapter discuss propagation of waves in time. This exercise gives you the opportunity to write basic code to create an animation depicting interference of two waves in time.
+* (a) Begin by replicating Fig. 6.4. Choose any two sinusoidal waves to clearly see fast and slow oscillations.
+* (b) Create an animation showing how interference propagates in time.
+* (c) Mark a point of constant phase and a point on the envelope. Which point has higher velocity?
+* (d) Demonstrate cases clearly: $v_p>v_g$, $v_p=v_g$, $v_p<v_g$.
+* (e) Find parameters such that the phase velocity is negative, $v_p<0$.
+
+### Exercise 2: Single-qubit interference
+Consider the Mach-Zehnder interferometer.
+* (a) Show that BS1 and BS2 are not hermitian conjugates, $\text{BS}1\cdot\text{BS}2\neq I$.
+* (b) What are the detection probabilities for D0 and D1 if input state is $(|0\rangle + |1\rangle)/\sqrt{2}$?
+* (c) How can you physically implement such an input state?
+
+### Exercise 3: Destroying the interference
+Interference at BS2 can be destroyed by placing an obstacle (or another detector D2) in one arm of the Mach-Zehnder interferometer.
+* (a) What is the state of the qubit immediately after BS1?
+* (b) What is the probability of detector D2 detecting a photon?
+* (c) What is the state of the qubit given that detector D2 did not click?
+* (d) What are the individual click probabilities for the three detectors?
+* (e) If we input a photon in the top port of BS1, where is it most likely going to be detected?
 
 
