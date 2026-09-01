@@ -437,7 +437,8 @@ $$
 
 This leads to the following two fixed points,
 
-$$n^*_1 = 0, \qquad n^*_2=\frac{GN_0-k}{\alpha G}.$$
+$$n_1^* = 0, \quad n_2^* = \frac{GN_0 - k}{\alpha G}$$
+
 
 The first fixed point describes the regime of an empty cavity with no photons, where the pump is not strong enough, there is no stimulated emission, and the laser acts as a lamp. The second fixed point exists only when $n_2^*\geq0$, since negative number of cavity photons does not make physical sense. This happens when $GN_0>k$, meaning the pump strength is over the lasing threshold.
 
