@@ -35,7 +35,7 @@ The wavelength is the shortest distance between two points of the wave where it 
 We can see that halving the wave number $k$ doubles the wavelength.
 In other words, increasing the wave number "compresses the oscillations", while decreasing the wave number "stretches" them.
 
-![Same frequency, different wave numbers.](Figures/Chapter06/BW/6-1_wave_number_BW.pdf)
+<img width="1536" height="1024" alt="Same frequency, different wave numbers" src="https://github.com/user-attachments/assets/e19a4ceb-8e51-4cbd-ad50-178862b22027" />
 
 Let's consider what happens when we fix the wave number but we vary the initial phase.
 In this case, we have shifted the second wave by an initial phase of $\phi_0=\pi/2$.
