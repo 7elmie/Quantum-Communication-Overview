@@ -472,7 +472,7 @@ Find the average number of photons per second after the light passes through (i)
 #### Solution
 Power $P$ in watts measures how much energy in joules is delivered per time in seconds. Therefore, the laser delivers $10^{-3}$ joules of energy every second. Knowing the energy of every photon $E_{\text{photon}}$, we can compute the number of photons per second,
 
-$$\#\text{ of photons per second} = \frac{P}{E_{\text{photon}}} = \frac{P\lambda}{hc} = 7.8\times10^{15}$$
+$$\text{Number of photons per second} = \frac{P}{E_{\text{photon}}} = \frac{P\lambda}{hc} = 7.8\times10^{15}$$
 
 (a)
 (i) 1 attenuator plate: $7.8\times10^{15} \times 0.01=7.8\times10^{13}$.
