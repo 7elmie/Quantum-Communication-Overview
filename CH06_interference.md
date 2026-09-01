@@ -42,7 +42,8 @@ In this case, we have shifted the second wave by an initial phase of $\phi_0=\pi
 Varying the initial phase has the effect of shifting the wave along the $x$ coordinate.
 The wavelength of the wave remains unaffected.
 
-![Same wavelength, different initial phase.](Figures/Chapter06/BW/6-1_phase_BW.pdf)
+<img width="1536" height="1024" alt="Same wavelength, different initial phase" src="https://github.com/user-attachments/assets/25f7ebb7-d019-431a-8e4c-ea6d9aba43c7" />
+
 
 Finally, let's add time dependence into the picture, where we have set the wave number $k=1$, and the initial phase $\phi_0=0$.
 The angular frequency of the blue wave is set to $\omega=0.1$.
