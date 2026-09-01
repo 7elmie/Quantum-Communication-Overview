@@ -112,3 +112,58 @@ Where $x$ is large, the interference becomes destructive as the waves go "out of
 ![Superposition of two waves.](Figures/Chapter06/BW/6-1_interference_wave_numbers_BW.pdf)
 
 ---
+
+## Phase and Group Velocities
+
+In this section, we will investigate the speed at which a wave propagates.
+
+***Phase velocity:***
+First, let's consider a single wave of a single frequency $\omega$ propagating through space:
+
+$$\Psi(x,t) = A \sin(\omega t - kx - \phi_0),$$
+
+where the phase at a particular point in time $t$ and space $x$ is $\theta(x,t)=\omega t-k x-\phi_0$.
+Differentiating the expression for phase with respect to time and setting it equal to zero:
+
+$$\frac{d\theta(x,t)}{d t} = \omega - k\frac{dx}{dt} = 0.$$
+
+The rate of change of the position, $dx/dt$, is called the ***phase velocity***:
+
+$$v_p \equiv \frac{dx}{dt}, \longrightarrow v_p = \frac{\omega}{k}.$$
+
+![Phase velocity.](Figures/Chapter06/BW/6-2_phase_velocity_BW.pdf)
+
+***Group velocity:***
+How is the speed of the wave affected when the wave itself is a superposition of multiple single-frequency waves?
+Let's consider two interfering waves:
+
+$$\Psi_1(x,t) = A \sin (\omega_1 t - k_1 x), \qquad \Psi_2(x,t) = A \sin (\omega_2 t - k_2 x).$$
+
+Interference of these two waves results in the following superposition:
+
+$$\Psi(x,t) = 2 A \underbrace{\sin \left( \frac{\omega_{1}+\omega_{2}}{2} t-\frac{k_{1}+k_{2}}{2} x \right)}_{\text{fast oscillations}} \underbrace{ \cos \left( \frac{\omega_{1}-\omega_{2}}{2} t-\frac{k_{1}-k_{2}}{2} x \right)}_{\text{slow oscillations}}.$$
+
+![Group velocity.](Figures/Chapter06/BW/6-2_group_velocity_BW.pdf)
+
+The first term captures the fast oscillations at frequency $(\omega_1+\omega_2)/2$, giving the phase velocity:
+
+$$v_p = \frac{\omega_1 + \omega_2}{k_1 + k_2}.$$
+
+The second term captures the slowly-varying envelope with frequency $(\omega_1-\omega_2)/2$, giving rise to ***group velocity***:
+
+$$v_g = \frac{\omega_1 - \omega_2}{k_1 - k_2}.$$
+
+The phase and group velocities of a superposition can be related as:
+
+$$v_p > v_g, \quad v_p = v_g, \quad v_p < v_g.$$
+
+It is the group velocity that tells us how quickly a signal carries information.
+
+![Superposition of more than two waves.](Figures/Chapter06/BW/6-2_superposition_many_BW.pdf)
+
+When we have a superposition of more than two single-frequency components, as pictured in Fig. 6.8, we observe long regions of destructive interference and short ***pulses*** where constructive interference kicks in.
+It is these pulses that carry information at the group velocity.
+
+---
+
+
