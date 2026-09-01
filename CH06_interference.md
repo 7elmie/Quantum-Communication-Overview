@@ -166,4 +166,67 @@ It is these pulses that carry information at the group velocity.
 
 ---
 
+## Interference with Single Photons
+
+![Double-slit experiment.](Figures/Chapter06/BW/6-3_double_slit_waves_BW.pdf)
+
+In a double-slit experiment with coherent light, diffraction and interference create an alternating pattern of bright and dark fringes on a screen.
+Bright fringes correspond to constructive interference ($\delta = \pm 2\pi n$), while dark fringes correspond to destructive interference ($\delta = \pm \pi n$).
+
+When we attenuate the laser light to single photons:
+* If one slit is covered, we observe a diffraction distribution with a broad peak centered behind the open slit.
+* If both slits are open, our naive expectation would be the simple sum of distributions from each slit without interference fringes. However, real laboratory experiments show that a clear interference pattern of bright and dark fringes still emerges.
+
+![Single-slit experiment with single photons.](Figures/Chapter06/BW/6-3_double_slit_covered_BW.pdf)
+
+![Naive expectation of double-slit experiment.](Figures/Chapter06/BW/6-3_double_slit_naive_BW.pdf)
+
+Even if we attenuate the incident light further so that only a single photon travels between the screens at any given time, the interference pattern still emerges eventually.
+This demonstrates that a single photon interferes with itself, with its multiple possible routes through the slits resulting in certain locations having zero probability of detection.
+
+![Double-slit experiment with single photons.](Figures/Chapter06/BW/6-3_double_slit_photons_BW.pdf)
+
+---
+
+## Interference with Qubits
+
+Consider the action of a Hadamard operation on initial states $\ket{0}$ and $\ket{1}$:
+
+$$|0\rangle = \begin{pmatrix} 1 \\ 0 \end{pmatrix}, \quad |1\rangle = \begin{pmatrix} 0 \\ 1 \end{pmatrix}, \quad H = \frac{1}{\sqrt{2}} \begin{pmatrix} 1 & 1 \\ 1 & -1 \end{pmatrix}.$$
+
+Applying a Hadamard twice to $\ket{0}$:
+
+$$H\left[\frac{1}{\sqrt{2}}(|0\rangle+|1\rangle)\right] = \frac{1}{2}(|0\rangle+|1\rangle+|0\rangle-|1\rangle) = |0\rangle.$$
+
+Here, both $\ket{0}$ terms have amplitude $+1$ (constructive interference), while $\ket{1}$ terms have amplitudes $+1$ and $-1$ (destructive interference).
+It is the ***interference of probability amplitudes*** that determines the state of the qubit.
+
+Consider two transformations (beam splitters BS1 and BS2):
+
+$$\text{BS}1 = \frac{1}{\sqrt{2}} \begin{pmatrix} 1 & 1 \\ 1 & -1 \end{pmatrix}, \quad \text{BS}2 = \frac{1}{\sqrt{2}}\begin{pmatrix} -1 & 1 \\ 1 & 1 \end{pmatrix}, \quad \text{BS}2 \cdot \text{BS1} \neq I.$$
+
+Applying BS1 followed by BS2 to state $\ket{1}$:
+
+$$\text{BS}2 \cdot \text{BS}1 |1\rangle = -|0\rangle = |0\rangle.$$
+
+This abstract calculation connects directly to the ***Mach-Zehnder interferometer***.
+
+![Mach-Zehnder interferometer.](Figures/Chapter06/BW/6-4_MZ_BW.pdf)
+
+An incident photon has two paths in the interferometer, representing a ***spatially encoded*** qubit:
+* Upper path: state $\ket{0}$
+* Lower path: state $\ket{1}$
+
+![State |0\rangle in the MI interferometer.](Figures/Chapter06/BW/6-4_MZ_ket_0_BW.pdf)
+
+![State |1\rangle in the MI interferometer.](Figures/Chapter06/BW/6-4_MZ_ket_1_BW.pdf)
+
+A photon entering the bottom port of BS1 passes through BS1 and BS2, resulting in constructive and destructive interference such that it is always detected by detector D0 and never by D1.
+If we block the lower path with an absorbing material, interference is prevented, and a photon has a 50/50 chance of being detected by either D0 or D1.
+
+![Lower path blocked.](Figures/Chapter06/BW/6-4_MZ_blocked_BW.pdf)
+
+---
+
+
 
