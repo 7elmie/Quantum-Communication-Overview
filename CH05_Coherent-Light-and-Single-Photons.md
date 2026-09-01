@@ -449,7 +449,7 @@ $$\frac{d\dot{n}}{dn}=GN_0-k-2\alpha Gn.$$
 
 Derivatives of $\dot{n}$ with respect $n$ at the fixed points are
 
-$$\left.\frac{d\dot{n}}{dn}\right|_{n^*_1}=GN_0-k, \quad \left.\frac{d\dot{n}}{dn}\right|_{n^*_2}=-(GN_0-k).$$
+$$\left.\frac{d\dot{n}}{dn}\right|_{n_1^*}=GN_0-k, \quad \left.\frac{d\dot{n}}{dn}\right|_{n_2^*}=-(GN_0-k)$$
 
 Looking at the first fixed point, we observe that in the weak-pump regime, $GN_0<k$, the derivative is negative and therefore the fixed point is stable. In the strong-pump regime, $GN_0>k$, the stability flips and the fixed point becomes unstable.
 The second fixed point only exists in the strong-pump regime, $GN_0>k$. We see that this fixed point is stable.
