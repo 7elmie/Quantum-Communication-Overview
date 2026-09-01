@@ -491,4 +491,5 @@ m & \geq \frac{\ln (7.8\times10^{-16})}{\ln (0.01)} = 7.94.
 \end{aligned}
 $$
 
-Therefore, we require at least $m=8$ attenuators in order for the average number of photons per second to drop below 1.
+Therefore, we require at least $m=8$ attenuators in order 
+for the average number of photons per second to drop below 1.
