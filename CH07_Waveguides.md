@@ -14,7 +14,8 @@ Being able to transmit light through a waveguide gets around some of these probl
 
 - Figure 7.2 — Tyndall's experiment. An early observation of light being guided by water pouring out of a bucket. Figures/Chapter07/BW/7-1_tyndall_BW.pdf
 
-One of the earliest demonstrations of guiding light in a waveguide was in an experiment by John Tyndall in 1870, depicted in - Fig. 7.2. He filled a large vessel with water and let the water pour out from a hole in one of the sides. He observed that light entering the water vessel did not exit the bucket through the hole in a straight line. Remarkably, the light rays were guided by the water and seemingly followed the water's path. Tyndall noticed that the rays were being reflected at the boundary between the water and air, confining them to stay within the streaming water.
+One of the earliest demonstrations of guiding light in a waveguide was in an experiment by John Tyndall in 1870, depicted in 
+- Fig. 7.2. He filled a large vessel with water and let the water pour out from a hole in one of the sides. He observed that light entering the water vessel did not exit the bucket through the hole in a straight line. Remarkably, the light rays were guided by the water and seemingly followed the water's path. Tyndall noticed that the rays were being reflected at the boundary between the water and air, confining them to stay within the streaming water.
 
 This observation led many researchers to investigate fiber optics and how to guide light, particularly in glass. But it was only in 1960 with the invention of the laser when people truly realized the potential of using laser light coupled to fiber optics. They spent a lot of effort in researching how to do that, and in 1966 people managed to couple lasers with fiber optics. This really sparked the first information revolution (and was rewarded with a Nobel Prize in Physics).
 
