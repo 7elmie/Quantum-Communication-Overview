@@ -1,7 +1,23 @@
-Chapter 7: Waveguides
+# Chapter 7: Waveguides
 
 This chapter is dedicated to the question of how to guide light using optical fibers. We begin by discussing why waveguides are necessary in long-distance communication before focusing on the main optical principles that allow us to confine light within optical fibers. We conclude this chapter by looking at the basic construction of optical fibers and some of their basic types and properties.
 
-7.1 Brief history of guiding light
+# 7.1 Brief history of guiding light
 
 Light is an excellent information carrier. In previous chapters, we have focused mainly on light's speed and robustness to noise as the characteristics that make it so suitable for communication. We have not really discussed another important property of light, namely that it travels in straight lines. At first, this might seem like another advantage. Coupled with light's speed and insensitivity to noise, it would seem that all we have to do is point at our intended target and light will carry our message to its destination unimpeded. However, this is not quite true. Due to the curvature of the Earth, the range of direct transmission is limited. This range depends on the altitude at which the source of light as well as the receiver are found. In order to increase the range, both need to be placed as high as possible.
+
+- Figure 7.1 — Two Everests. The disadvantage of direct transmission of light. Figures/Chapter07/BW/7-1_everest_BW.pdf
+
+Let's perform a little thought experiment in order to get an intuition for the maximum distance the transmitter and receiver can be separated by before they lose direct line of sight due to the curvature of the Earth. Consider placing the light source at the highest point on Earth, the top of Mount Everest at 8849 meters above sea level, as shown in Fig. 7.1. Let's say that there is another Mount Everest with the receiver placed at its top. How far apart can the two mountains be such that they are just able to maintain direct line of sight, assuming there are no obstacles between them? With some basic trigonometry, the answer comes to a mere 672 kilometers. And this is without worrying about absorption due to bad weather.
+
+Being able to transmit light through a waveguide gets around some of these problems. Weather conditions are no concern anymore. Absorption is still an issue but not a fundamental obstacle, as we will learn in Chapter 11. Before learning how optical fibers work, it is worth looking at some brief history of guiding light.
+
+- Figure 7.2 — Tyndall's experiment. An early observation of light being guided by water pouring out of a bucket. Figures/Chapter07/BW/7-1_tyndall_BW.pdf
+
+One of the earliest demonstrations of guiding light in a waveguide was in an experiment by John Tyndall in 1870, depicted in - Fig. 7.2. He filled a large vessel with water and let the water pour out from a hole in one of the sides. He observed that light entering the water vessel did not exit the bucket through the hole in a straight line. Remarkably, the light rays were guided by the water and seemingly followed the water's path. Tyndall noticed that the rays were being reflected at the boundary between the water and air, confining them to stay within the streaming water.
+
+This observation led many researchers to investigate fiber optics and how to guide light, particularly in glass. But it was only in 1960 with the invention of the laser when people truly realized the potential of using laser light coupled to fiber optics. They spent a lot of effort in researching how to do that, and in 1966 people managed to couple lasers with fiber optics. This really sparked the first information revolution (and was rewarded with a Nobel Prize in Physics).
+
+Just to give you some idea how far we've come, in 1970 it was possible to transmit about one percent of the original light over a distance of one kilometer. If you put in light of some power at the beginning, after one kilometer, you only had one hundredth of the original signal remaining. Twenty years later, in 1990, it was possible to transmit 96% of the original power over the same distance of one kilometer.
+
+Let's have a quick look at what we're going to discuss in this chapter. First, we're going to begin with two basic phenomena of how light behaves when it hits the interface of two materials. We're going to talk about reflection and refraction. These two are crucial for understanding how fiber optics works. Then we will talk about total internal reflection, where we're going to combine reflection and refraction and derive the condition for total internal reflection. Total internal reflection is what we have seen in Tyndall's experiment, where light was not escaping the water stream but was being reflected. We will conclude with some basics of fiber optic cables, in particular how they are constructed and the differences between various types of optical fibers.
